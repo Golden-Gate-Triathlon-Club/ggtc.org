@@ -1,5 +1,9 @@
 .navbar {
 	// show dropdown menu on hover vs click
+
+	a {
+		color: #fff;
+	}
 	@media all and (min-width: 992px) {
 		.nav-item {
 			.dropdown-menu {
