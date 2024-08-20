@@ -15,10 +15,10 @@
 	}
 
 	&.btn-primary {
-		background-color: $brand-pink;
+		background-color: $brand-red;
 
 		&:hover {
-			background-color: darken($brand-pink, 5%);
+			background-color: darken($brand-red, 5%);
 		}
 	}
 
@@ -26,6 +26,14 @@
 		background-color: $brand-purple;
 		&:hover {
 			background-color: darken($brand-purple, 5%);
+		}
+	}
+
+	&.btn-outline-primary {
+		border: 1px solid #fff;
+		&:hover {
+			background-color: #fff;
+			color: #000;
 		}
 	}
 }

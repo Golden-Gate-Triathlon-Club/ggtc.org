@@ -11865,6 +11865,13 @@ header {
   background: #000;
   padding: 10px 0;
 }
+header a {
+  color: #fff;
+  text-decoration: none;
+}
+header a:hover {
+  color: #fff;
+}
 
 .navbar a {
   color: #fff;
@@ -11887,6 +11894,16 @@ header {
 footer {
   background: #000;
   padding: 40px 0;
+  color: #fff;
+}
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+footer svg {
+  fill: #fff;
+  width: 24px;
+  height: auto;
 }
 
 main {
@@ -11908,14 +11925,21 @@ main {
   transform: translateY(-50%);
 }
 .btn.btn-primary {
-  background-color: #ed5791;
+  background-color: #dd2b2e;
 }
 .btn.btn-primary:hover {
-  background-color: #eb4082;
+  background-color: #ce2124;
 }
 .btn.btn-secondary {
   background-color: #5b0047;
 }
 .btn.btn-secondary:hover {
   background-color: #420033;
+}
+.btn.btn-outline-primary {
+  border: 1px solid #fff;
+}
+.btn.btn-outline-primary:hover {
+  background-color: #fff;
+  color: #000;
 }
