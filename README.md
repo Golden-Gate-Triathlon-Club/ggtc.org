@@ -1,1 +1,0 @@
-# ggtc.org
