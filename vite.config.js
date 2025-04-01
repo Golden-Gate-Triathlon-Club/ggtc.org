@@ -11,4 +11,7 @@ export default defineConfig({
       configFile: './prettier.config.js', // Optional: specify config file
     }),
   ],
+  build: {
+    outDir: 'docs', // Changes output directory from 'dist' to 'docs'
+  },
 });
