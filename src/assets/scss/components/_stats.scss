@@ -1,0 +1,20 @@
+.stat {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	align-items: center;
+	justify-content: center;
+	svg {
+		height: auto;
+		width: 60px;
+		transition: transform 0.3s ease;
+		transform-origin: center;
+	}
+
+	&:hover {
+		svg {
+			transform: scale(1.2) rotate(-5deg);
+		}
+	}
+}

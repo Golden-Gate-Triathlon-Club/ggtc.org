@@ -11964,7 +11964,7 @@ main {
 }
 
 .hero-slider,
-.swiper {
+.swiper-hero-slider {
   --swiper-pagination-bullet-width: 13px;
   --swiper-pagination-bullet-height: 13px;
   --swiper-pagination-bullet-horizontal-gap: 8px;
@@ -11975,27 +11975,27 @@ main {
   height: 650px;
 }
 .hero-slider img,
-.swiper img {
+.swiper-hero-slider img {
   height: 650px;
   width: 100%;
   object-fit: cover;
 }
 @media (max-width: 991.98px) {
   .hero-slider,
-  .swiper {
+  .swiper-hero-slider {
     height: 350px;
   }
   .hero-slider img,
-  .swiper img {
+  .swiper-hero-slider img {
     height: 350px;
   }
 }
 .hero-slider .swiper-slide,
-.swiper .swiper-slide {
+.swiper-hero-slider .swiper-slide {
   position: relative;
 }
 .hero-slider .swiper-slide .caption,
-.swiper .swiper-slide .caption {
+.swiper-hero-slider .swiper-slide .caption {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -12007,6 +12007,59 @@ main {
   padding: 10px 0;
 }
 .hero-slider .swiper-slide .caption p,
-.swiper .swiper-slide .caption p {
+.swiper-hero-slider .swiper-slide .caption p {
   margin-bottom: 0;
+}
+
+.swiper-sponsors-slider {
+  position: relative;
+  height: auto;
+}
+.swiper-sponsors-slider .swiper-slide img {
+  margin: 0 auto;
+  display: block;
+}
+.swiper-sponsors-slider .swiper-button-prev,
+.swiper-sponsors-slider .swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(221, 43, 46, 0.8);
+  border-radius: 50%;
+  color: #fff;
+  z-index: 10;
+}
+.swiper-sponsors-slider .swiper-button-prev:hover,
+.swiper-sponsors-slider .swiper-button-next:hover {
+  background-color: rgb(221, 43, 46);
+}
+.swiper-sponsors-slider .swiper-button-prev::after,
+.swiper-sponsors-slider .swiper-button-next::after {
+  font-size: 18px;
+}
+.swiper-sponsors-slider .swiper-button-prev {
+  left: 10px;
+}
+.swiper-sponsors-slider .swiper-button-next {
+  right: 10px;
+}
+
+.stat {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.stat svg {
+  height: auto;
+  width: 60px;
+  transition: transform 0.3s ease;
+  transform-origin: center;
+}
+.stat:hover svg {
+  transform: scale(1.2) rotate(-5deg);
 }

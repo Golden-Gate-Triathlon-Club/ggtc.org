@@ -25,6 +25,121 @@
 			</div>
 		</section>
 
+
+		<section class="sponsors-slider">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<h2 class="text-center">GGTC Club Sponsors</h2>
+
+						<div class="swiper swiper-sponsors-slider">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img src="https://placehold.co/150x100?text=Logo1" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="https://placehold.co/150x100?text=Logo2" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="https://placehold.co/150x100?text=Logo3" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="https://placehold.co/150x100?text=Logo4" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="https://placehold.co/150x100?text=Logo5" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="https://placehold.co/150x100?text=Logo6" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="https://placehold.co/150x100?text=Logo7" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="https://placehold.co/150x100?text=Logo8" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="https://placehold.co/150x100?text=Logo9" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="https://placehold.co/150x100?text=Logo10" alt="">
+								</div>
+
+							</div>
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</section>
+		<script>
+			const swiperSponsors = new Swiper('.swiper-sponsors-slider', {
+				slidesPerView: 2,
+				spaceBetween: 20,
+				autoHeight: true,
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+				loop: true,
+				breakpoints: {
+
+					991: {
+						slidesPerView: 4,
+					}
+				}
+			});
+		</script>
+
+
+		<section class="stats text-center">
+			<div class="d-flex g-0 flex-column flex-md-row">
+				<div class="col">
+					<div class="stat bg-dark p-5">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+							<path
+								d="M320 48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM125.7 175.5c9.9-9.9 23.4-15.5 37.5-15.5c1.9 0 3.8 .1 5.6 .3L137.6 254c-9.3 28 1.7 58.8 26.8 74.5l86.2 53.9-25.4 88.8c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l28.7-100.4c5.9-20.6-2.6-42.6-20.7-53.9L238 299l30.9-82.4 5.1 12.3C289 264.7 323.9 288 362.7 288l21.3 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-21.3 0c-12.9 0-24.6-7.8-29.5-19.7l-6.3-15c-14.6-35.1-44.1-61.9-80.5-73.1l-48.7-15c-11.1-3.4-22.7-5.2-34.4-5.2c-31 0-60.8 12.3-82.7 34.3L57.4 153.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l23.1-23.1zM91.2 352L32 352c-17.7 0-32 14.3-32 32s14.3 32 32 32l69.6 0c19 0 36.2-11.2 43.9-28.5L157 361.6l-9.5-6c-17.5-10.9-30.5-26.8-37.9-44.9L91.2 352z" />
+						</svg>
+
+						<p class="text-light">600+ Members</p>
+					</div>
+				</div>
+				<div class="col">
+					<div class="stat p-5">
+
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+							<path
+								d="M400 0L176 0c-26.5 0-48.1 21.8-47.1 48.2c.2 5.3 .4 10.6 .7 15.8L24 64C10.7 64 0 74.7 0 88c0 92.6 33.5 157 78.5 200.7c44.3 43.1 98.3 64.8 138.1 75.8c23.4 6.5 39.4 26 39.4 45.6c0 20.9-17 37.9-37.9 37.9L192 448c-17.7 0-32 14.3-32 32s14.3 32 32 32l192 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-26.1 0C337 448 320 431 320 410.1c0-19.6 15.9-39.2 39.4-45.6c39.9-11 93.9-32.7 138.2-75.8C542.5 245 576 180.6 576 88c0-13.3-10.7-24-24-24L446.4 64c.3-5.2 .5-10.4 .7-15.8C448.1 21.8 426.5 0 400 0zM48.9 112l84.4 0c9.1 90.1 29.2 150.3 51.9 190.6c-24.9-11-50.8-26.5-73.2-48.3c-32-31.1-58-76-63-142.3zM464.1 254.3c-22.4 21.8-48.3 37.3-73.2 48.3c22.7-40.3 42.8-100.5 51.9-190.6l84.4 0c-5.1 66.3-31.1 111.2-63 142.3z" />
+						</svg>
+
+
+						<p>34 Podiums in 2024 </p>
+					</div>
+				</div>
+				<div class="col">
+					<div class="stat bg-danger p-5">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+							<path
+								d="M304 240l0-223.4c0-9 7-16.6 16-16.6C443.7 0 544 100.3 544 224c0 9-7.6 16-16.6 16L304 240zM32 272C32 150.7 122.1 50.3 239 34.3c9.2-1.3 17 6.1 17 15.4L256 288 412.5 444.5c6.7 6.7 6.2 17.7-1.5 23.1C371.8 495.6 323.8 512 272 512C139.5 512 32 404.6 32 272zm526.4 16c9.3 0 16.6 7.8 15.4 17c-7.7 55.9-34.6 105.6-73.9 142.3c-6 5.6-15.4 5.2-21.2-.7L320 288l238.4 0z" />
+						</svg>
+						<p>51% Female<br />15% LGBTQIA</p>
+					</div>
+				</div>
+				<div class="col">
+					<div class="stat bg-secondary p-5">
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+							<path
+								d="M173.8 5.5c11-7.3 25.4-7.3 36.4 0L228 17.2c6 3.9 13 5.8 20.1 5.4l21.3-1.3c13.2-.8 25.6 6.4 31.5 18.2l9.6 19.1c3.2 6.4 8.4 11.5 14.7 14.7L344.5 83c11.8 5.9 19 18.3 18.2 31.5l-1.3 21.3c-.4 7.1 1.5 14.2 5.4 20.1l11.8 17.8c7.3 11 7.3 25.4 0 36.4L366.8 228c-3.9 6-5.8 13-5.4 20.1l1.3 21.3c.8 13.2-6.4 25.6-18.2 31.5l-19.1 9.6c-6.4 3.2-11.5 8.4-14.7 14.7L301 344.5c-5.9 11.8-18.3 19-31.5 18.2l-21.3-1.3c-7.1-.4-14.2 1.5-20.1 5.4l-17.8 11.8c-11 7.3-25.4 7.3-36.4 0L156 366.8c-6-3.9-13-5.8-20.1-5.4l-21.3 1.3c-13.2 .8-25.6-6.4-31.5-18.2l-9.6-19.1c-3.2-6.4-8.4-11.5-14.7-14.7L39.5 301c-11.8-5.9-19-18.3-18.2-31.5l1.3-21.3c.4-7.1-1.5-14.2-5.4-20.1L5.5 210.2c-7.3-11-7.3-25.4 0-36.4L17.2 156c3.9-6 5.8-13 5.4-20.1l-1.3-21.3c-.8-13.2 6.4-25.6 18.2-31.5l19.1-9.6C65 70.2 70.2 65 73.4 58.6L83 39.5c5.9-11.8 18.3-19 31.5-18.2l21.3 1.3c7.1 .4 14.2-1.5 20.1-5.4L173.8 5.5zM272 192a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM1.3 441.8L44.4 339.3c.2 .1 .3 .2 .4 .4l9.6 19.1c11.7 23.2 36 37.3 62 35.8l21.3-1.3c.2 0 .5 0 .7 .2l17.8 11.8c5.1 3.3 10.5 5.9 16.1 7.7l-37.6 89.3c-2.3 5.5-7.4 9.2-13.3 9.7s-11.6-2.2-14.8-7.2L74.4 455.5l-56.1 8.3c-5.7 .8-11.4-1.5-15-6s-4.3-10.7-2.1-16zm248 60.4L211.7 413c5.6-1.8 11-4.3 16.1-7.7l17.8-11.8c.2-.1 .4-.2 .7-.2l21.3 1.3c26 1.5 50.3-12.6 62-35.8l9.6-19.1c.1-.2 .2-.3 .4-.4l43.2 102.5c2.2 5.3 1.4 11.4-2.1 16s-9.3 6.9-15 6l-56.1-8.3-32.2 49.2c-3.2 5-8.9 7.7-14.8 7.2s-11-4.3-13.3-9.7z" />
+						</svg>
+						<p>2nd Overall Ironman Club 2024</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
 	</main>
 
 	@@include('inc/footer.html')
