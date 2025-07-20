@@ -11943,3 +11943,70 @@ main {
   background-color: #fff;
   color: #000;
 }
+
+.anouncement-banner {
+  background-color: #dd2b2e;
+  color: #fff;
+  padding: 20px 0;
+}
+.anouncement-banner p {
+  margin-bottom: 0;
+}
+.anouncement-banner a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+  transform: color 0.2s ease-in-out;
+}
+.anouncement-banner a:hover {
+  color: #231f20;
+}
+
+.hero-slider,
+.swiper {
+  --swiper-pagination-bullet-width: 13px;
+  --swiper-pagination-bullet-height: 13px;
+  --swiper-pagination-bullet-horizontal-gap: 8px;
+  --swiper-pagination-color: #dd2b2e;
+  --swiper-pagination-bullet-inactive-color: #fff;
+  --swiper-pagination-bullet-inactive-opacity: 0.7;
+  --swiper-pagination-bottom: 70px;
+  height: 650px;
+}
+.hero-slider img,
+.swiper img {
+  height: 650px;
+  width: 100%;
+  object-fit: cover;
+}
+@media (max-width: 991.98px) {
+  .hero-slider,
+  .swiper {
+    height: 350px;
+  }
+  .hero-slider img,
+  .swiper img {
+    height: 350px;
+  }
+}
+.hero-slider .swiper-slide,
+.swiper .swiper-slide {
+  position: relative;
+}
+.hero-slider .swiper-slide .caption,
+.swiper .swiper-slide .caption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(221, 43, 46, 0.8);
+  z-index: 2;
+  padding: 10px 0;
+}
+.hero-slider .swiper-slide .caption p,
+.swiper .swiper-slide .caption p {
+  margin-bottom: 0;
+}

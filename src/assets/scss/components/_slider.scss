@@ -1,0 +1,44 @@
+.hero-slider,
+.swiper {
+	--swiper-pagination-bullet-width: 13px;
+	--swiper-pagination-bullet-height: 13px;
+	--swiper-pagination-bullet-horizontal-gap: 8px;
+	--swiper-pagination-color: #dd2b2e;
+	--swiper-pagination-bullet-inactive-color: #fff;
+	--swiper-pagination-bullet-inactive-opacity: 0.7;
+	--swiper-pagination-bottom: 70px;
+
+	height: 650px;
+	img {
+		height: 650px;
+		width: 100%;
+		object-fit: cover;
+	}
+
+	@media (max-width: 991.98px) {
+		height: 350px;
+		img {
+			height: 350px;
+		}
+		// --swiper-pagination-bottom: 20px;
+	}
+
+	.swiper-slide {
+		position: relative;
+		.caption {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			text-align: center;
+			color: $brand-white;
+			background-color: rgba(221, 43, 46, 0.8);
+			z-index: 2;
+			padding: 10px 0;
+
+			p {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

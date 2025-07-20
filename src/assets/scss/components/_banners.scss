@@ -1,0 +1,20 @@
+.anouncement-banner {
+	background-color: $brand-red;
+	color: $brand-white;
+	padding: 20px 0;
+
+	p {
+		margin-bottom: 0;
+	}
+
+	a {
+		color: $brand-white;
+		text-decoration: underline;
+		text-underline-offset: 4px;
+		text-decoration-thickness: 2px;
+		transform: color 0.2s ease-in-out;
+		&:hover {
+			color: $brand-dark;
+		}
+	}
+}
