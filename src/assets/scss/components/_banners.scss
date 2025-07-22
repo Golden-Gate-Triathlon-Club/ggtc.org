@@ -19,11 +19,38 @@
 	}
 }
 
+.into {
+	padding: 50px 0;
+}
+
+.training-programs-banner {
+	padding: 50px 0;
+}
+
+.events {
+	padding: 50px 0;
+}
+
+.featured-event {
+	background: linear-gradient(180deg, $brand-blue 0%, $brand-red 100%);
+	color: $brand-white;
+	border-radius: 20px;
+	padding: 20px;
+}
+
+.sponsors-slider {
+	padding: 50px 0;
+}
+
 .sports-banner {
 	.col {
 		position: relative;
+		height: 200px;
 		overflow: hidden;
+		text-decoration: none;
 		&:hover {
+			cursor: pointer;
+
 			img {
 				transform: scale(1.07);
 			}
@@ -54,6 +81,10 @@
 	}
 }
 
+.member-benefits {
+	padding: 50px 0;
+}
+
 .photo-banner-full-width {
 	position: relative;
 	height: 500px;
@@ -67,4 +98,8 @@
 		object-fit: cover;
 		z-index: 1;
 	}
+}
+
+.cta-banner {
+	padding: 50px 0;
 }

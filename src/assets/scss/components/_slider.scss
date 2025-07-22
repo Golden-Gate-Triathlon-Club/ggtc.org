@@ -6,7 +6,7 @@
 	--swiper-pagination-color: #dd2b2e;
 	--swiper-pagination-bullet-inactive-color: #fff;
 	--swiper-pagination-bullet-inactive-opacity: 0.7;
-	--swiper-pagination-bottom: 70px;
+	--swiper-pagination-bottom: 80px;
 
 	height: 650px;
 	img {
@@ -34,7 +34,8 @@
 			color: $brand-white;
 			background-color: rgba(221, 43, 46, 0.8);
 			z-index: 2;
-			padding: 10px 0;
+			padding: 15px 0;
+			font-size: 20px;
 
 			p {
 				margin-bottom: 0;

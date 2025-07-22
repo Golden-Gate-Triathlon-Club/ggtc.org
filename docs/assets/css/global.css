@@ -11861,6 +11861,11 @@ body {
   line-height: 1.5;
 }
 
+.eyebrow {
+  display: block;
+  font-size: 16px;
+}
+
 header {
   background: #000;
   padding: 10px 0;
@@ -11931,10 +11936,12 @@ main {
   background-color: #ce2124;
 }
 .btn.btn-secondary {
-  background-color: #5b0047;
+  background-color: #fff;
+  color: #dd2b2e;
 }
 .btn.btn-secondary:hover {
-  background-color: #420033;
+  background-color: #f2f2f2;
+  color: #dd2b2e;
 }
 .btn.btn-outline-primary {
   border: 1px solid #fff;
@@ -11963,9 +11970,37 @@ main {
   color: #231f20;
 }
 
+.into {
+  padding: 50px 0;
+}
+
+.training-programs-banner {
+  padding: 50px 0;
+}
+
+.events {
+  padding: 50px 0;
+}
+
+.featured-event {
+  background: linear-gradient(180deg, #0071bc 0%, #dd2b2e 100%);
+  color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.sponsors-slider {
+  padding: 50px 0;
+}
+
 .sports-banner .col {
   position: relative;
+  height: 200px;
   overflow: hidden;
+  text-decoration: none;
+}
+.sports-banner .col:hover {
+  cursor: pointer;
 }
 .sports-banner .col:hover img {
   transform: scale(1.07);
@@ -11994,6 +12029,10 @@ main {
   transition: transform 0.2s ease-in-out;
 }
 
+.member-benefits {
+  padding: 50px 0;
+}
+
 .photo-banner-full-width {
   position: relative;
   height: 500px;
@@ -12008,6 +12047,10 @@ main {
   z-index: 1;
 }
 
+.cta-banner {
+  padding: 50px 0;
+}
+
 .hero-slider,
 .swiper-hero-slider {
   --swiper-pagination-bullet-width: 13px;
@@ -12016,7 +12059,7 @@ main {
   --swiper-pagination-color: #dd2b2e;
   --swiper-pagination-bullet-inactive-color: #fff;
   --swiper-pagination-bullet-inactive-opacity: 0.7;
-  --swiper-pagination-bottom: 70px;
+  --swiper-pagination-bottom: 80px;
   height: 650px;
 }
 .hero-slider img,
@@ -12049,7 +12092,8 @@ main {
   color: #fff;
   background-color: rgba(221, 43, 46, 0.8);
   z-index: 2;
-  padding: 10px 0;
+  padding: 15px 0;
+  font-size: 20px;
 }
 .hero-slider .swiper-slide .caption p,
 .swiper-hero-slider .swiper-slide .caption p {

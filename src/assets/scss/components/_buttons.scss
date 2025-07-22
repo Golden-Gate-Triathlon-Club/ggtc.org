@@ -23,9 +23,11 @@
 	}
 
 	&.btn-secondary {
-		background-color: $brand-purple;
+		background-color: $brand-white;
+		color: $brand-red;
 		&:hover {
-			background-color: darken($brand-purple, 5%);
+			background-color: darken($brand-white, 5%);
+			color: $brand-red;
 		}
 	}
 
