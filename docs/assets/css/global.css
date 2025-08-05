@@ -11911,9 +11911,6 @@ footer svg {
   height: auto;
 }
 
-main {
-  padding: 40px 0;
-}
 .btn {
   border: none;
   border-radius: 25px;
@@ -12037,6 +12034,17 @@ main {
   position: relative;
   height: 500px;
 }
+.photo-banner-full-width.photo-banner-tall {
+  height: auto;
+}
+.photo-banner-full-width.photo-banner-tall img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  z-index: 1;
+}
 .photo-banner-full-width img {
   position: absolute;
   top: 0;
@@ -12133,6 +12141,51 @@ main {
 }
 .swiper-sponsors-slider .swiper-button-next {
   right: 10px;
+}
+
+.swiper-community-slider {
+  position: relative;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.swiper-community-slider .swiper-slide {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.swiper-community-slider img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.swiper-community-slider .swiper-pagination-2 {
+  position: relative;
+  margin-top: 10px;
+  text-align: center;
+}
+.swiper-community-slider .swiper-pagination-2 .swiper-pagination-bullet {
+  width: 13px;
+  height: 13px;
+  background-color: #e5e5e5;
+  opacity: 1;
+  margin: 0 4px;
+}
+.swiper-community-slider .swiper-pagination-2 .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #a8a8a9;
+}
+@media (max-width: 767.98px) {
+  .swiper-community-slider img {
+    max-height: 300px;
+  }
+}
+@media (max-width: 575.98px) {
+  .swiper-community-slider img {
+    max-height: 250px;
+  }
 }
 
 .stat {
