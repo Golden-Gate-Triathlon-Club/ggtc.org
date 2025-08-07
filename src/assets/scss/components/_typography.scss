@@ -1,15 +1,49 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap");
 
-$opensans: "Open Sans", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
+$opensans: "Open Sans", sans-serif;
+$barlow-condensed: "Barlow Condensed", sans-serif;
+$roboto: "Roboto", sans-serif;
 html,
 body {
-	font-family: $opensans;
-	font-size: 16px;
+	font-family: $roboto;
+	font-size: 18px;
 	line-height: 1.5;
 }
 
 .eyebrow {
 	display: block;
-	font-size: 16px;
+	font-size: 24px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.display-1 {
+	font-family: $barlow-condensed;
+	font-weight: 600;
+	font-size: 96px;
+	line-height: 1;
+}
+
+h2 {
+	font-family: $barlow-condensed;
+	font-weight: 600;
+	font-size: 56px;
+	margin-bottom: 20px;
+}
+
+h3 {
+	font-family: $barlow-condensed;
+	font-weight: 600;
+	font-size: 32px;
+	margin-bottom: 20px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	margin-bottom: 30px;
 }

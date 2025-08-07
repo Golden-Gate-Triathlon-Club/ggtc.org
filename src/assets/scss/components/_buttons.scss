@@ -36,6 +36,15 @@
 		}
 	}
 
+	&.btn-tertiary {
+		background-color: $brand-dark;
+		color: $brand-white;
+		&:hover {
+			background-color: darken($brand-dark, 10%);
+			color: $brand-white;
+		}
+	}
+
 	&.btn-outline-primary {
 		color: $brand-white;
 		border: 1px solid $brand-white;

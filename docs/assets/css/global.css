@@ -5,6 +5,8 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -11856,14 +11858,47 @@ textarea.form-control-lg {
 }
 html,
 body {
-  font-family: "Open Sans", sans-serif;
-  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
   line-height: 1.5;
 }
 
 .eyebrow {
   display: block;
-  font-size: 16px;
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.display-1 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 600;
+  font-size: 96px;
+  line-height: 1;
+}
+
+h2, .h2 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 600;
+  font-size: 56px;
+  margin-bottom: 20px;
+}
+
+h3, .h3 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+h1, .h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+  margin-bottom: 30px;
 }
 
 header {
@@ -11972,6 +12007,14 @@ footer svg {
 .btn.btn-secondary:hover {
   background-color: #f2f2f2;
   color: #dd2b2e;
+}
+.btn.btn-tertiary {
+  background-color: #231f20;
+  color: #fff;
+}
+.btn.btn-tertiary:hover {
+  background-color: #080707;
+  color: #fff;
 }
 .btn.btn-outline-primary {
   color: #fff;
