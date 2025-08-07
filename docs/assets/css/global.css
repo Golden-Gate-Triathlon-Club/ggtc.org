@@ -11891,6 +11891,20 @@ header a:hover {
   }
 }
 
+.navbar-toggler-label {
+  font-size: 30px;
+  background-color: #dd2b2e;
+  padding: 0px 15px 7px 15px;
+  border-radius: 5px;
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+  line-height: 1;
+  border: 2px solid #8c1618;
+}
+.navbar-toggler-label:hover {
+  cursor: pointer;
+}
+
 @media all and (max-width: 992px) {
   .navbar-toggler:checked ~ #navbarSupportedContent {
     display: block !important;
@@ -11913,12 +11927,16 @@ footer svg {
 
 .btn {
   border: none;
-  border-radius: 25px;
+  border-radius: 30px;
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
   padding: 15px 25px;
   position: relative;
+  margin-right: 15px;
+}
+.btn:last-child {
+  margin-right: 0;
 }
 .btn .fas {
   position: absolute;
@@ -12026,10 +12044,6 @@ footer svg {
   transition: transform 0.2s ease-in-out;
 }
 
-.member-benefits {
-  padding: 50px 0;
-}
-
 .photo-banner-full-width {
   position: relative;
   height: 500px;
@@ -12053,10 +12067,6 @@ footer svg {
   height: 100%;
   object-fit: cover;
   z-index: 1;
-}
-
-.cta-banner {
-  padding: 50px 0;
 }
 
 .hero-slider,
@@ -12204,4 +12214,20 @@ footer svg {
 }
 .stat:hover svg {
   transform: scale(1.2) rotate(-5deg);
+}
+
+.table a:not(.btn) {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  transition: color 0.3s ease-in-out;
+}
+.table a:not(.btn):hover {
+  color: #dd2b2e;
+}
+
+.padding-y-100 {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }

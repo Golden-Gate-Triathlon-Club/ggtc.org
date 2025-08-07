@@ -1,0 +1,39 @@
+{
+	"rules": [
+		{
+			"description": "Always use Bootstrap's SCSS mixins (e.g., media-breakpoint-up, media-breakpoint-down) for media queries instead of raw @media rules.",
+			"applies_to": ["scss", "sass"],
+			"enforcement": "required"
+		},
+		{
+			"description": "Prefer Bootstrap utility classes and CSS variables for common styling before writing custom CSS.",
+			"applies_to": ["html", "scss", "sass"],
+			"enforcement": "recommended"
+		},
+		{
+			"description": "Define SCSS variables at the top level or in variables files, not inside style rules.",
+			"applies_to": ["scss", "sass"],
+			"enforcement": "required"
+		},
+		{
+			"description": "Do not use CSS variables in SCSS logic or conditionals.",
+			"applies_to": ["scss", "sass"],
+			"enforcement": "required"
+		},
+		{
+			"description": "Use DOM methods (e.g., textContent) instead of document.write for dynamic content.",
+			"applies_to": ["js"],
+			"enforcement": "required"
+		},
+		{
+			"description": "Avoid empty Bootstrap columns unless necessary; add a comment if intentional.",
+			"applies_to": ["html"],
+			"enforcement": "recommended"
+		},
+		{
+			"description": "Use only let and const for variable declarations in JavaScript. Do not use var.",
+			"applies_to": ["js"],
+			"enforcement": "required"
+		}
+	]
+}

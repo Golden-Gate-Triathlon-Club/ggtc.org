@@ -20,6 +20,20 @@
 	}
 }
 
+.navbar-toggler-label {
+	font-size: 30px;
+	background-color: $brand-red;
+	padding: 0px 15px 7px 15px;
+	border-radius: 5px;
+	color: $brand-white;
+	transition: color 0.3s ease-in-out;
+	line-height: 1;
+	border: 2px solid darken($brand-red, 20%);
+	&:hover {
+		cursor: pointer;
+	}
+}
+
 // toggle navbar with checkbox - style as needed
 @media all and (max-width: 992px) {
 	.navbar-toggler:checked ~ #navbarSupportedContent {

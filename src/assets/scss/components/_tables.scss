@@ -1,0 +1,12 @@
+.table {
+	a:not(.btn) {
+		color: $brand-white;
+		text-decoration: underline;
+		text-decoration-thickness: 2px;
+		text-underline-offset: 3px;
+		transition: color 0.3s ease-in-out;
+		&:hover {
+			color: $brand-red;
+		}
+	}
+}
