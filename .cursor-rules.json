@@ -1,9 +1,14 @@
 {
 	"rules": [
 		{
-			"description": "Always use Bootstrap's SCSS mixins (e.g., media-breakpoint-up, media-breakpoint-down) for media queries instead of raw @media rules.",
+			"description": "Always use Bootstrap's SCSS mixins for media queries. Use @include media-breakpoint-up(sm/md/lg/xl) or @include media-breakpoint-down(sm/md/lg/xl) instead of raw @media rules. Examples: @include media-breakpoint-up(md) { ... } or @include media-breakpoint-down(lg) { ... }",
 			"applies_to": ["scss", "sass"],
-			"enforcement": "required"
+			"enforcement": "required",
+			"examples": [
+				"@include media-breakpoint-up(md) { .container { max-width: 720px; } }",
+				"@include media-breakpoint-down(lg) { .sidebar { display: none; } }",
+				"@include media-breakpoint-between(md, xl) { .card { margin: 1rem; } }"
+			]
 		},
 		{
 			"description": "Prefer Bootstrap utility classes and CSS variables for common styling before writing custom CSS.",

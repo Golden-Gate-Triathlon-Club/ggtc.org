@@ -1,9 +1,22 @@
 .navbar {
 	// show dropdown menu on hover vs click
 
-	a {
-		color: #fff;
+	a:not(.btn) {
+		color: $brand-white;
+		transition: color 0.3s ease-in-out;
+		&:hover {
+			color: $brand-red;
+		}
 	}
+
+	.dropdown-menu a:not(.btn) {
+		color: $brand-dark;
+		&:hover {
+			color: $brand-red;
+			background-color: transparent;
+		}
+	}
+
 	@media all and (min-width: 992px) {
 		.nav-item {
 			.dropdown-menu {
@@ -21,6 +34,7 @@
 }
 
 .navbar-toggler-label {
+	display: none;
 	font-size: 30px;
 	background-color: $brand-red;
 	padding: 0px 15px 7px 15px;
@@ -36,6 +50,9 @@
 
 // toggle navbar with checkbox - style as needed
 @media all and (max-width: 992px) {
+	.navbar-toggler-label {
+		display: block;
+	}
 	.navbar-toggler:checked ~ #navbarSupportedContent {
 		display: block !important;
 	}

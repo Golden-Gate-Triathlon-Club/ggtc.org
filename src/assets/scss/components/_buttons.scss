@@ -23,7 +23,7 @@
 		background-color: $brand-red;
 
 		&:hover {
-			background-color: darken($brand-red, 5%);
+			background-color: darken($brand-red, 10%);
 		}
 	}
 
@@ -37,10 +37,11 @@
 	}
 
 	&.btn-outline-primary {
-		border: 1px solid #fff;
+		color: $brand-white;
+		border: 1px solid $brand-white;
 		&:hover {
-			background-color: #fff;
-			color: #000;
+			background-color: $brand-white;
+			color: $brand-red;
 		}
 	}
 }
