@@ -11863,6 +11863,10 @@ body {
   line-height: 1.5;
 }
 
+.highlight {
+  color: #dd2b2e;
+}
+
 .eyebrow {
   display: block;
   font-size: 24px;
@@ -11911,6 +11915,13 @@ header a {
 }
 header a:hover {
   color: #fff;
+}
+
+.hero img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+  background-position: center;
 }
 
 .navbar a:not(.btn) {
@@ -12134,13 +12145,19 @@ footer svg {
   --swiper-pagination-bullet-height: 13px;
   --swiper-pagination-bullet-horizontal-gap: 8px;
   --swiper-pagination-color: #dd2b2e;
-  --swiper-pagination-bullet-inactive-color: #fff;
+  --swiper-pagination-bullet-inactive-color: #000000;
   --swiper-pagination-bullet-inactive-opacity: 0.7;
   --swiper-pagination-bottom: 80px;
   height: 650px;
 }
 .hero-slider img,
 .swiper-hero-slider img {
+  height: 650px;
+  width: 100%;
+  object-fit: cover;
+}
+.hero-slider video,
+.swiper-hero-slider video {
   height: 650px;
   width: 100%;
   object-fit: cover;
@@ -12152,6 +12169,10 @@ footer svg {
   }
   .hero-slider img,
   .swiper-hero-slider img {
+    height: 350px;
+  }
+  .hero-slider video,
+  .swiper-hero-slider video {
     height: 350px;
   }
 }
@@ -12180,6 +12201,7 @@ footer svg {
 .swiper-sponsors-slider {
   position: relative;
   height: auto;
+  margin-top: 50px;
 }
 .swiper-sponsors-slider .swiper-slide img {
   margin: 0 auto;
@@ -12286,6 +12308,15 @@ footer svg {
   color: #dd2b2e;
 }
 
+.icon-calendar {
+  width: 50px;
+  height: auto;
+}
+
+.icon-red {
+  fill: #dd2b2e;
+}
+
 .padding-y-100 {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -12300,5 +12331,16 @@ footer svg {
   .padding-y-100 {
     padding-top: 50px;
     padding-bottom: 50px;
+  }
+}
+
+.padding-y-50 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+@media (max-width: 991.98px) {
+  .padding-y-50 {
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
 }

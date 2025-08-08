@@ -1,0 +1,590 @@
+<html>
+<head>
+	<title>Golden Gate Triathlon Club - San Francisco</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="assets/css/global.css" />
+	<link href="light-mode-favicon.png" rel="icon" media="(prefers-color-scheme: light)">
+	<link href="dark-mode-favicon.png" rel="icon" media="(prefers-color-scheme: dark)">
+	<link href="light-mode-favicon.png" rel="icon" media="(prefers-color-scheme: no-preference)">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+  <header>
+	<nav class="navbar navbar-expand-lg">
+		<div class="container">
+			<a class="navbar-brand" href="#">
+				<img src="assets/img/ggtc-logo.svg" alt="Golden Gate Triathlon Club">
+			</a>
+			<!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button> -->
+
+
+			<!-- TODO - mega menu? -->
+
+			<label for="toggle" class="navbar-toggler-label">☰</label>
+			<input id="toggle" type="checkbox" class="navbar-toggler visually-hidden" />
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mb-2 mb-lg-0">
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">About</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">Mission &amp; Values</a></li>
+							<li><a class="dropdown-item" href="#">Code of Conduct</a></li>
+							<li><a class="dropdown-item" href="#">Board Members</a></li>
+							<li><a class="dropdown-item" href="#">Ambassador Team</a></li>
+							<li><a class="dropdown-item" href="#">Sponsors</a></li>
+							<li><a class="dropdown-item" href="#">Social</a></li>
+							<li><a class="dropdown-item" href="#">Triathlon Survival Checklist</a></li>
+							<li><a class="dropdown-item" href="#">Donate</a></li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="">Calendar</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Sports</a>
+						<ul class="dropdown-menu">
+							<li class=" dir">
+								<div class="item">
+									<a class="dropdown-item" href="#" title="Swim"><span>Swim</span></a>
+									<ul class="secondLevel">
+										<li class=" ">
+											<div class="item">
+												<a class="dropdown-item" href="#" title="Swimming in Aquatic Park"><span>Swimming in Aquatic
+														Park</span></a>
+											</div>
+										</li>
+
+										<li class=" ">
+											<div class="item">
+												<a class="dropdown-item" href="#" title="Public Pool Schedule"><span>Public Pool
+														Schedule</span></a>
+											</div>
+										</li>
+
+										<li class=" ">
+											<div class="item">
+												<a class="dropdown-item" href="#" title="Becoming a Better Swimmer"><span>Becoming a Better
+														Swimmer</span></a>
+											</div>
+										</li>
+
+										<li class=" ">
+											<div class="item">
+												<a class="dropdown-item" href="#" title="Coached Swimming 101"><span>Coached Swimming
+														101</span></a>
+											</div>
+										</li>
+
+										<li class=" ">
+											<div class="item">
+												<a class="dropdown-item" href="#" title="Set Library"><span>Set Library</span></a>
+											</div>
+										</li>
+
+										<li class=" ">
+											<div class="item">
+												<a class="dropdown-item" href="#"
+													title="Registration Requirements for Thursday Swims"><span>Registration Requirements for
+														Thursday Swims</span></a>
+											</div>
+										</li>
+
+									</ul>
+								</div>
+							</li>
+
+							<li class=" dir">
+								<div class="item">
+									<a class="dropdown-item" href="#" title="Bike"><span>Bike</span></a>
+									<ul class="secondLevel">
+										<li class=" ">
+											<div class="item">
+												<a class="dropdown-item" href="#" title="Ride Rating System"><span>Ride Rating System</span></a>
+											</div>
+										</li>
+
+										<li class=" ">
+											<div class="item">
+												<a class="dropdown-item" href="#" title="Route Repo"><span>Route Repo</span></a>
+											</div>
+										</li>
+
+										<li class=" ">
+											<div class="item">
+												<a class="dropdown-item" href="#" title="Getting a Bike"><span>Getting a Bike</span></a>
+											</div>
+										</li>
+
+										<li class=" ">
+											<div class="item">
+												<a class="dropdown-item" href="#" title="Gearing Up"><span>Gearing Up</span></a>
+											</div>
+										</li>
+
+										<li class=" ">
+											<div class="item">
+												<a class="dropdown-item" href="#" title="Using GPS Routes"><span>Using GPS Routes</span></a>
+											</div>
+										</li>
+
+									</ul>
+								</div>
+							</li>
+
+							<li class=" dir">
+								<div class="item">
+									<a class="dropdown-item" href="#" title="Run"><span>Run</span></a>
+									<ul class="secondLevel">
+										<li class=" ">
+											<div class="item">
+												<a class="dropdown-item" href="#" title="Popular Routes"><span>Popular Routes</span></a>
+											</div>
+										</li>
+
+										<li class=" ">
+											<div class="item">
+												<a class="dropdown-item" href="#" title="Track Etiquette"><span>Track Etiquette</span></a>
+											</div>
+										</li>
+
+										<li class=" ">
+											<div class="item">
+												<a class="dropdown-item" href="#" title="Trail Running 101"><span>Trail Running 101</span></a>
+											</div>
+										</li>
+
+									</ul>
+								</div>
+							</li>
+
+							<li class=" ">
+								<div class="item">
+									<a class="dropdown-item" href="#" title="Strength Training"><span>Strength Training</span></a>
+								</div>
+							</li>
+
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="">Community</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Training Programs</a>
+						<ul class="dropdown-menu">
+							<li class="dropend">
+								<a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+									Short Distance Program
+								</a>
+								<ul class="">
+									<li><a class="dropdown-item" href="#">Sprint Training</a></li>
+									<li><a class="dropdown-item" href="#">Olympic Training</a></li>
+									<li><a class="dropdown-item" href="#">Beginner Friendly</a></li>
+								</ul>
+							</li>
+							<li class="dropend">
+								<a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+									Women Tri Together
+								</a>
+								<ul class="">
+									<li><a class="dropdown-item" href="#">Program Overview</a></li>
+									<li><a class="dropdown-item" href="#">Schedule</a></li>
+									<li><a class="dropdown-item" href="#">Registration</a></li>
+								</ul>
+							</li>
+							<li class="dropend">
+								<a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+									Long Distance Program
+								</a>
+								<ul class="">
+									<li><a class="dropdown-item" href="#">Half Ironman</a></li>
+									<li><a class="dropdown-item" href="#">Full Ironman</a></li>
+									<li><a class="dropdown-item" href="#">Ultra Distance</a></li>
+								</ul>
+							</li>
+							<li><a class="dropdown-item" href="#">Century Program</a></li>
+							<li><a class="dropdown-item" href="#">Marathon Training Program</a></li>
+							<li><a class="dropdown-item" href="#">Trail Running Program</a></li>
+							<li><a class="dropdown-item" href="#">1:1 Coaching</a></li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="">Why Join</a>
+					</li>
+				</ul>
+
+				<div class="ms-auto ">
+					<a href="#" class="btn btn-primary">Join Now</a>
+					<a href="#" class="btn btn-outline-primary">Login</a>
+
+				</div>
+
+
+			</div>
+		</div>
+	</nav>
+</header>
+  
+  <section class="hero">
+  <img src="./assets/img/page-hero-run.webp" alt="">
+</section>
+
+  <main>
+    <section id="intro" class="intro padding-y-100">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h1 class="display-1"><span class="highlight">Run</span></h1>
+            <div class="row">
+              <div class="col-lg-9">
+                <p class="lead">
+                  New-found runner? Marathoner? Ultra-marathoner? Our runs are open to all abilities and experience
+                  levels with the goal
+                  to help you find that runner’s high. Our program consists of weekly coached track sessions on
+                  Wednesdays with Coach
+                  Mario Fraioli, and Friday trail runs around Twin Peaks and Marin Headlands.
+                </p>
+              </div>
+              <div class="col-lg-3">
+                <a href="#" class="btn btn-primary">Learn More about GGTC</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="padding-y-100">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+
+            <div class="swiper-community-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="https://placehold.co/600x400?text=Photo1" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://placehold.co/600x400?text=Photo2" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://placehold.co/600x400?text=Photo3" alt="">
+                </div>
+              </div>
+              <div class="swiper-pagination-2"></div>
+            </div>
+
+
+            <script>
+              const swiperCommunity = new Swiper('.swiper-community-slider', {
+                speed: 400,
+                spaceBetween: 0,
+                loop: true,
+                effect: 'fade',
+                fadeEffect: {
+                  crossFade: true
+                },
+                autoplay: {
+                  delay: 5000,
+                  disableOnInteraction: true,
+                },
+                pagination: {
+                  el: ".swiper-pagination-2",
+                  clickable: true,
+                },
+              });
+            </script>
+
+
+          </div>
+
+          <div class="col-lg-6">
+            <h2>Our Weekly Runs</h2>
+
+            <table class="table">
+              <thead>
+                <tr>
+                  <th colspan="2">Day/ Time</th>
+                  <th>Type</th>
+                  <th>Location</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><svg class="icon-calendar icon-red" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                      <path
+                        d="M224 64C206.3 64 192 78.3 192 96L192 128L160 128C124.7 128 96 156.7 96 192L96 240L544 240L544 192C544 156.7 515.3 128 480 128L448 128L448 96C448 78.3 433.7 64 416 64C398.3 64 384 78.3 384 96L384 128L256 128L256 96C256 78.3 241.7 64 224 64zM96 288L96 480C96 515.3 124.7 544 160 544L480 544C515.3 544 544 515.3 544 480L544 288L96 288z" />
+                    </svg></td>
+                  <td>Wednesday<br />
+                    6:15 PM - 7:30 PM</td>
+                  <td>Track</td>
+                  <td>Kezar Stadium</td>
+                </tr>
+                <tr>
+                  <td><svg class="icon-calendar icon-red" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                      <path
+                        d="M224 64C206.3 64 192 78.3 192 96L192 128L160 128C124.7 128 96 156.7 96 192L96 240L544 240L544 192C544 156.7 515.3 128 480 128L448 128L448 96C448 78.3 433.7 64 416 64C398.3 64 384 78.3 384 96L384 128L256 128L256 96C256 78.3 241.7 64 224 64zM96 288L96 480C96 515.3 124.7 544 160 544L480 544C515.3 544 544 515.3 544 480L544 288L96 288z" />
+                    </svg></td>
+                  <td>Friday<br />
+                    6:00 PM - 7:00 PM</td>
+                  <td>Trail</td>
+                  <td>Conservatory of Flowers<br />
+                    (for Twin Peaks)</td>
+                </tr>
+                <tr>
+                  <td><svg class="icon-calendar icon-red" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                      <path
+                        d="M224 64C206.3 64 192 78.3 192 96L192 128L160 128C124.7 128 96 156.7 96 192L96 240L544 240L544 192C544 156.7 515.3 128 480 128L448 128L448 96C448 78.3 433.7 64 416 64C398.3 64 384 78.3 384 96L384 128L256 128L256 96C256 78.3 241.7 64 224 64zM96 288L96 480C96 515.3 124.7 544 160 544L480 544C515.3 544 544 515.3 544 480L544 288L96 288z" />
+                    </svg></td>
+                  <td>Friday<br />
+                    6:30 AM - 7:30 AM</td>
+                  <td>Trail</td>
+                  <td>Friday
+                    6:30 AM</td>
+                </tr>
+
+              </tbody>
+            </table>
+            <p>New-found runner? Marathoner? Ultra-marathoner? Our runs are open to all abilities and experience
+              levels
+              with the goal
+              to help you find that runner’s high. Our program consists of weekly coached track sessions on Wednesdays
+              with Coach
+              Mario Fraioli, and Friday trail runs around Twin Peaks and Marin Headlands.</p>
+
+            <a href="#" class="btn btn-tertiary">View Calendar</a>
+            <a href="#" class="btn btn-primary">Join GGTC</a>
+          </div>
+        </div>
+    </section>
+
+    <section id="events" class="events bg-dark text-light padding-y-100">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2>
+              <span class="eyebrow">
+                Want to check us out?
+              </span>
+              Upcoming Events
+            </h2>
+            <table class="table table-dark table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Date</th>
+                  <th scope="col">Sport</th>
+                  <th scope="col">Location</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2024-07-01</td>
+                  <td>Swim</td>
+                  <td>Aquatic Park</td>
+                </tr>
+                <tr>
+                  <td>2024-07-03</td>
+                  <td>Bike</td>
+                  <td>Golden Gate Park</td>
+                </tr>
+                <tr>
+                  <td>2024-07-05</td>
+                  <td>Run</td>
+                  <td>Presidio Trails</td>
+                </tr>
+                <tr>
+                  <td>2024-07-08</td>
+                  <td>Swim</td>
+                  <td>Baker Beach</td>
+                </tr>
+                <tr>
+                  <td>2024-07-10</td>
+                  <td>Bike</td>
+                  <td>Marin Headlands</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="text-center">
+              <a href="#" class="btn btn-primary">View Calendar</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="featured-event">
+              <h3>Featured Event</h3>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa porro consequatur nobis minima accusamus
+                tempora iste dolores consequuntur fugit quod doloremque labore delectus, officiis officia harum
+                laudantium ut, itaque maxime?</p>
+              <div class="text-center">
+                <a href="#" class="btn btn-secondary">Register</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+    <section class="photo-banner-full-width photo-banner-tall">
+      <img src="./assets/img/ggtc-photo-collage.webp" alt="">
+    </section>
+
+    <section id="sponsors" class="sponsors-slider padding-y-100">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="text-center">GGTC Club Sponsors</h2>
+            <p class="text-center">
+              Short blurb about our sponsors and how they support us. Lorem ipsum dolor sit amet consectetur adipisicing
+              elit. Quisquam, quos.
+            </p>
+
+            <div class="swiper swiper-sponsors-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="https://placehold.co/150x100?text=Logo1" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://placehold.co/150x100?text=Logo2" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://placehold.co/150x100?text=Logo3" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://placehold.co/150x100?text=Logo4" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://placehold.co/150x100?text=Logo5" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://placehold.co/150x100?text=Logo6" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://placehold.co/150x100?text=Logo7" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://placehold.co/150x100?text=Logo8" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://placehold.co/150x100?text=Logo9" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://placehold.co/150x100?text=Logo10" alt="">
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <script>
+      const swiperSponsors = new Swiper('.swiper-sponsors-slider', {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        autoHeight: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        loop: true,
+        breakpoints: {
+
+          991: {
+            slidesPerView: 4,
+          }
+        }
+      });
+    </script>
+
+
+
+    <section id="cta" class="cta-banner bg-dark text-light padding-y-100">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2>
+              <span class="eyebrow">questions? contact our run director</span>
+              run@ggtc.org
+            </h2>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+
+  </main>
+
+  <footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<nav>
+					<ul class="d-flex gap-3 list-unstyled justify-content-center align-items-center">
+						<li class="">
+							<a href=""><img src="assets/img/ggtc-logo.svg" alt="Golden Gate Triathlon Club"></a>
+						</li>
+						<li class="">
+							<a class="" href="">About</a>
+						</li>
+						<li class="">
+							<a class="" href="">Calendar</a>
+						</li>
+						<li class="">
+							<a class="" href="">Sports</a>
+						</li>
+						<li class="">
+							<a class="" href="">Community</a>
+						</li>
+						<li class="">
+							<a class="" href="">Training Programs</a>
+						</li>
+						<li class="">
+							<a class="" href="">Why Join</a>
+						</li>
+
+						<li class="ms-auto">
+							<a href="https://youtube.com">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+									<path
+										d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z" />
+								</svg>
+							</a>
+						</li>
+
+						<li>
+							<a href="https://instagram.com">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+									<path
+										d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+								</svg>
+							</a>
+						</li>
+					</ul>
+
+
+				</nav>
+			</div>
+		</div>
+	</div>
+</footer>
+</body>
+
+</html>
