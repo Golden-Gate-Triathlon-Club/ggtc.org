@@ -95,7 +95,8 @@
 	}
 }
 
-.swiper-community-slider {
+.swiper-community-slider,
+.swiper-default-slider {
 	position: relative;
 	width: 100%;
 	height: auto;
@@ -116,7 +117,7 @@
 		border-radius: 8px;
 	}
 
-	.swiper-pagination-2 {
+	.swiper-pagination {
 		position: relative;
 		margin-top: 10px;
 		text-align: center;
@@ -145,4 +146,9 @@
 			max-height: 250px;
 		}
 	}
+}
+
+.swiper-wrapper {
+	height: auto !important;
+	padding-bottom: 20px;
 }

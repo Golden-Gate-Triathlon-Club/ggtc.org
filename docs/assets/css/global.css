@@ -8000,7 +8000,7 @@ textarea.form-control-lg {
   padding: 1.5rem !important;
 }
 
-.p-5 {
+.p-5, .section-island .island {
   padding: 3rem !important;
 }
 
@@ -8820,7 +8820,7 @@ textarea.form-control-lg {
   border-radius: var(--bs-border-radius) !important;
 }
 
-.rounded-3 {
+.rounded-3, .section-island .island {
   border-radius: var(--bs-border-radius-lg) !important;
 }
 
@@ -11856,6 +11856,12 @@ textarea.form-control-lg {
     max-width: 1180px !important;
   }
 }
+@media (max-width: 991.98px) {
+  section .row {
+    gap: 20px;
+  }
+}
+
 html,
 body {
   font-family: "Roboto", sans-serif;
@@ -11903,6 +11909,7 @@ h3,
 h4,
 .h4 {
   margin-bottom: 30px;
+  line-height: 1;
 }
 
 header {
@@ -11938,7 +11945,7 @@ header a:hover {
   color: #dd2b2e;
   background-color: transparent;
 }
-@media all and (min-width: 992px) {
+@media (min-width: 1200px) {
   .navbar .nav-item .dropdown-menu {
     display: none;
     margin-top: 0;
@@ -11963,7 +11970,7 @@ header a:hover {
   cursor: pointer;
 }
 
-@media all and (max-width: 992px) {
+@media (max-width: 1199.98px) {
   .navbar-toggler-label {
     display: block;
   }
@@ -12080,9 +12087,14 @@ footer svg {
 
 .sports-banner .col {
   position: relative;
-  height: 200px;
+  min-height: 350px;
   overflow: hidden;
   text-decoration: none;
+}
+@media (max-width: 991.98px) {
+  .sports-banner .col {
+    min-height: 200px;
+  }
 }
 .sports-banner .col:hover {
   cursor: pointer;
@@ -12096,12 +12108,18 @@ footer svg {
   align-items: center;
   justify-content: center;
   color: #fff;
-  height: 100%;
+  height: 350px;
   width: 100%;
   z-index: 2;
 }
+@media (max-width: 991.98px) {
+  .sports-banner .sport {
+    height: 200px;
+  }
+}
 .sports-banner .sport h2, .sports-banner .sport .h2 {
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
 }
 .sports-banner img {
   position: absolute;
@@ -12137,6 +12155,12 @@ footer svg {
   height: 100%;
   object-fit: cover;
   z-index: 1;
+}
+
+@media (max-width: 991.98px) {
+  .cta-banner {
+    text-align: center;
+  }
 }
 
 .hero-slider,
@@ -12234,49 +12258,62 @@ footer svg {
   right: 10px;
 }
 
-.swiper-community-slider {
+.swiper-community-slider,
+.swiper-default-slider {
   position: relative;
   width: 100%;
   height: auto;
   border-radius: 8px;
   overflow: hidden;
 }
-.swiper-community-slider .swiper-slide {
+.swiper-community-slider .swiper-slide,
+.swiper-default-slider .swiper-slide {
   position: relative;
   width: 100%;
   height: auto;
 }
-.swiper-community-slider img {
+.swiper-community-slider img,
+.swiper-default-slider img {
   width: 100%;
   height: auto;
   display: block;
   object-fit: cover;
   border-radius: 8px;
 }
-.swiper-community-slider .swiper-pagination-2 {
+.swiper-community-slider .swiper-pagination,
+.swiper-default-slider .swiper-pagination {
   position: relative;
   margin-top: 10px;
   text-align: center;
 }
-.swiper-community-slider .swiper-pagination-2 .swiper-pagination-bullet {
+.swiper-community-slider .swiper-pagination .swiper-pagination-bullet,
+.swiper-default-slider .swiper-pagination .swiper-pagination-bullet {
   width: 13px;
   height: 13px;
   background-color: #e5e5e5;
   opacity: 1;
   margin: 0 4px;
 }
-.swiper-community-slider .swiper-pagination-2 .swiper-pagination-bullet.swiper-pagination-bullet-active {
+.swiper-community-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active,
+.swiper-default-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: #a8a8a9;
 }
 @media (max-width: 767.98px) {
-  .swiper-community-slider img {
+  .swiper-community-slider img,
+  .swiper-default-slider img {
     max-height: 300px;
   }
 }
 @media (max-width: 575.98px) {
-  .swiper-community-slider img {
+  .swiper-community-slider img,
+  .swiper-default-slider img {
     max-height: 250px;
   }
+}
+
+.swiper-wrapper {
+  height: auto !important;
+  padding-bottom: 20px;
 }
 
 .stat {
@@ -12422,6 +12459,12 @@ footer svg {
     order: 20;
   }
 }
+@media (max-width: 991.98px) {
+  .section-50-50.photo-left-50-50 .row {
+    flex-direction: column-reverse;
+  }
+}
+
 .padding-y-100 {
   padding-top: 100px;
   padding-bottom: 100px;

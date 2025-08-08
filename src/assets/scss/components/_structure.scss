@@ -8,6 +8,11 @@
 	}
 }
 
-// section {
-// 	padding: 50px 0;
-// }
+section {
+	// when columns stack, add gap to .row
+	@include media-breakpoint-down(lg) {
+		.row {
+			gap: 20px;
+		}
+	}
+}

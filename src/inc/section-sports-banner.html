@@ -1,0 +1,22 @@
+<section class="sports-banner">
+  <div class="d-flex g-0 flex-column flex-md-row">
+    <a href="#" class="col">
+      <img src="https://placehold.co/300x200/333/444?text=background" alt="">
+      <div class="sport">
+        <h2>Swim</h2>
+      </div>
+    </a>
+    <a href="#" class="col">
+      <img src="https://placehold.co/300x200/555/666?text=background" alt="">
+      <div class="sport">
+        <h2>Bike</h2>
+      </div>
+    </a>
+    <a href="#" class="col">
+      <img src="https://placehold.co/300x200/777/888?text=background" alt="">
+      <div class="sport">
+        <h2>Run</h2>
+      </div>
+    </a>
+  </div>
+</section>

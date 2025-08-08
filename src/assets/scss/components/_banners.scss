@@ -45,7 +45,10 @@
 .sports-banner {
 	.col {
 		position: relative;
-		height: 200px;
+		min-height: 350px;
+		@include media-breakpoint-down(lg) {
+			min-height: 200px;
+		}
 		overflow: hidden;
 		text-decoration: none;
 		&:hover {
@@ -62,11 +65,15 @@
 		align-items: center;
 		justify-content: center;
 		color: #fff;
-		height: 100%;
+		height: 350px;
+		@include media-breakpoint-down(lg) {
+			height: 200px;
+		}
 		width: 100%;
 		z-index: 2;
 		h2 {
 			text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+			text-transform: uppercase;
 		}
 	}
 	img {
@@ -113,4 +120,7 @@
 }
 
 .cta-banner {
+	@include media-breakpoint-down(lg) {
+		text-align: center;
+	}
 }

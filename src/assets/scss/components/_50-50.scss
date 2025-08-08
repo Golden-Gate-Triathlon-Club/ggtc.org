@@ -1,0 +1,10 @@
+.section-50-50 {
+	// add gap when columns stack
+	@include media-breakpoint-down(lg) {
+		&.photo-left-50-50 {
+			.row {
+				flex-direction: column-reverse;
+			}
+		}
+	}
+}
