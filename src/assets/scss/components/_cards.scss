@@ -7,17 +7,36 @@
 .board-bio-list {
 	display: flex;
 	flex-wrap: wrap;
-	--flex-gap: 20px;
+	--flex-gap: 30px;
 	gap: var(--flex-gap);
 }
 
 .bio-card {
 	flex: 1 1 calc((100% - var(--flex-gap) * 2) / 3);
 	max-width: calc((100% - var(--flex-gap) * 2) / 3);
+
+	&.selected {
+		// transform: scale(1.03);
+		// transition: transform 0.3s ease-in-out;
+		position: relative;
+		&:after {
+			border-color: transparent transparent $brand-white transparent;
+			border-style: solid;
+			border-width: 0 7px 12px 7px;
+			bottom: -31px;
+			content: "";
+			height: 0;
+			left: 50%;
+			position: absolute;
+			width: 0;
+			z-index: 1;
+		}
+	}
 }
 
 .bio-details .island {
 	padding: 30px;
+	border-radius: 10px;
 }
 
 @include media-breakpoint-down(lg) {

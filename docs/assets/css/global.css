@@ -12324,7 +12324,7 @@ footer svg {
 .board-bio-list {
   display: flex;
   flex-wrap: wrap;
-  --flex-gap: 20px;
+  --flex-gap: 30px;
   gap: var(--flex-gap);
 }
 
@@ -12332,9 +12332,25 @@ footer svg {
   flex: 1 1 calc((100% - var(--flex-gap) * 2) / 3);
   max-width: calc((100% - var(--flex-gap) * 2) / 3);
 }
+.bio-card.selected {
+  position: relative;
+}
+.bio-card.selected:after {
+  border-color: transparent transparent #fff transparent;
+  border-style: solid;
+  border-width: 0 7px 12px 7px;
+  bottom: -31px;
+  content: "";
+  height: 0;
+  left: 50%;
+  position: absolute;
+  width: 0;
+  z-index: 1;
+}
 
 .bio-details .island {
   padding: 30px;
+  border-radius: 10px;
 }
 
 @media (max-width: 991.98px) {

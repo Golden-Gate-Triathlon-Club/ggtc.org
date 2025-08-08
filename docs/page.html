@@ -673,6 +673,12 @@
       const bioCards = document.querySelectorAll('.bio-card');
       bioCards.forEach(card => {
         card.addEventListener('click', () => {
+          // add class of selected to the bio card that was clicked and remove it from all other bio cards
+          bioCards.forEach(card => {
+            card.classList.remove('selected');
+          });
+          card.classList.add('selected');
+
           // hide all bio-details
           const bioDetails = document.querySelectorAll('.bio-details');
           bioDetails.forEach(detail => {
@@ -687,6 +693,47 @@
         });
       });
     </script>
+
+
+    <section class="50-50 padding-y-100">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 order-2 order-lg-1">
+            <img src="https://placehold.co/600x400?text=Photo" alt="" class="img-fluid">
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2">
+            <h2>
+              Headlime lorem ipsum dolor sit amet
+            </h2>
+            <h3>Another supporting headline</h3>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="50-50 padding-y-100">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2>
+              Headlime lorem ipsum dolor sit amet
+            </h2>
+            <h3>Another supporting headline</h3>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+
+            <a href="#" class="btn btn-primary">Learn More</a>
+          </div>
+          <div class="col-lg-6">
+            <img src="https://placehold.co/600x400?text=Photo" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </section>
 
 
 
