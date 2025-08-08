@@ -1,0 +1,46 @@
+.bio-card {
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.board-bio-list {
+	display: flex;
+	flex-wrap: wrap;
+	--flex-gap: 20px;
+	gap: var(--flex-gap);
+}
+
+.bio-card {
+	flex: 1 1 calc((100% - var(--flex-gap) * 2) / 3);
+	max-width: calc((100% - var(--flex-gap) * 2) / 3);
+}
+
+.bio-details .island {
+	padding: 30px;
+}
+
+@include media-breakpoint-down(lg) {
+	.bio-details {
+		display: block !important;
+	}
+
+	.bio-card {
+		flex-basis: 100%;
+		max-width: 100%;
+	}
+
+	// Automatically generate order classes for bio cards and details
+	// Change this number if you need more bio cards
+	$max-bio-cards: 10;
+
+	@for $i from 1 through $max-bio-cards {
+		.bio-card-#{$i} {
+			order: #{($i - 1) * 2 + 1}; // 1, 3, 5, 7, etc.
+		}
+
+		.bio-details-#{$i} {
+			order: #{($i - 1) * 2 + 2}; // 2, 4, 6, 8, etc.
+		}
+	}
+}

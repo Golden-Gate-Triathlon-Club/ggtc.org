@@ -12317,6 +12317,95 @@ footer svg {
   fill: #dd2b2e;
 }
 
+.bio-card:hover {
+  cursor: pointer;
+}
+
+.board-bio-list {
+  display: flex;
+  flex-wrap: wrap;
+  --flex-gap: 20px;
+  gap: var(--flex-gap);
+}
+
+.bio-card {
+  flex: 1 1 calc((100% - var(--flex-gap) * 2) / 3);
+  max-width: calc((100% - var(--flex-gap) * 2) / 3);
+}
+
+.bio-details .island {
+  padding: 30px;
+}
+
+@media (max-width: 991.98px) {
+  .bio-details {
+    display: block !important;
+  }
+  .bio-card {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  .bio-card-1 {
+    order: 1;
+  }
+  .bio-details-1 {
+    order: 2;
+  }
+  .bio-card-2 {
+    order: 3;
+  }
+  .bio-details-2 {
+    order: 4;
+  }
+  .bio-card-3 {
+    order: 5;
+  }
+  .bio-details-3 {
+    order: 6;
+  }
+  .bio-card-4 {
+    order: 7;
+  }
+  .bio-details-4 {
+    order: 8;
+  }
+  .bio-card-5 {
+    order: 9;
+  }
+  .bio-details-5 {
+    order: 10;
+  }
+  .bio-card-6 {
+    order: 11;
+  }
+  .bio-details-6 {
+    order: 12;
+  }
+  .bio-card-7 {
+    order: 13;
+  }
+  .bio-details-7 {
+    order: 14;
+  }
+  .bio-card-8 {
+    order: 15;
+  }
+  .bio-details-8 {
+    order: 16;
+  }
+  .bio-card-9 {
+    order: 17;
+  }
+  .bio-details-9 {
+    order: 18;
+  }
+  .bio-card-10 {
+    order: 19;
+  }
+  .bio-details-10 {
+    order: 20;
+  }
+}
 .padding-y-100 {
   padding-top: 100px;
   padding-bottom: 100px;
