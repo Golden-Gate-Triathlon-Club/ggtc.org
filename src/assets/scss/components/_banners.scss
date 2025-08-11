@@ -123,4 +123,9 @@
 	@include media-breakpoint-down(lg) {
 		text-align: center;
 	}
+
+	a {
+		color: $brand-white;
+		text-decoration: underline;
+	}
 }

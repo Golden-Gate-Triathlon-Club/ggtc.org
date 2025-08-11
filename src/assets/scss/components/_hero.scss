@@ -4,5 +4,11 @@
 		width: 100%;
 		object-fit: cover;
 		background-position: center;
+
+		@include media-breakpoint-down(lg) {
+			height: 250px;
+		}
 	}
+
+	
 }

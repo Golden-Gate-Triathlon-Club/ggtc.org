@@ -11930,6 +11930,11 @@ header a:hover {
   object-fit: cover;
   background-position: center;
 }
+@media (max-width: 991.98px) {
+  .hero img {
+    height: 250px;
+  }
+}
 
 .navbar a:not(.btn) {
   color: #fff;
@@ -12162,6 +12167,10 @@ footer svg {
     text-align: center;
   }
 }
+.cta-banner a {
+  color: #fff;
+  text-decoration: underline;
+}
 
 .hero-slider,
 .swiper-hero-slider {
@@ -12316,6 +12325,17 @@ footer svg {
   padding-bottom: 20px;
 }
 
+.d-grid {
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 1fr; /* makes all rows equal height */
+  gap: 0;
+}
+@media (max-width: 991.98px) {
+  .d-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .stat {
   height: 100%;
   display: flex;
@@ -12383,6 +12403,23 @@ footer svg {
   position: absolute;
   width: 0;
   z-index: 1;
+}
+@media (max-width: 991.98px) {
+  .bio-card {
+    position: relative;
+  }
+  .bio-card:after {
+    border-color: transparent transparent #fff transparent;
+    border-style: solid;
+    border-width: 0 7px 12px 7px;
+    bottom: -31px;
+    content: "";
+    height: 0;
+    left: 50%;
+    position: absolute;
+    width: 0;
+    z-index: 1;
+  }
 }
 
 .bio-details .island {
@@ -12457,6 +12494,126 @@ footer svg {
   }
   .bio-details-10 {
     order: 20;
+  }
+  .bio-card-11 {
+    order: 21;
+  }
+  .bio-details-11 {
+    order: 22;
+  }
+  .bio-card-12 {
+    order: 23;
+  }
+  .bio-details-12 {
+    order: 24;
+  }
+  .bio-card-13 {
+    order: 25;
+  }
+  .bio-details-13 {
+    order: 26;
+  }
+  .bio-card-14 {
+    order: 27;
+  }
+  .bio-details-14 {
+    order: 28;
+  }
+  .bio-card-15 {
+    order: 29;
+  }
+  .bio-details-15 {
+    order: 30;
+  }
+  .bio-card-16 {
+    order: 31;
+  }
+  .bio-details-16 {
+    order: 32;
+  }
+  .bio-card-17 {
+    order: 33;
+  }
+  .bio-details-17 {
+    order: 34;
+  }
+  .bio-card-18 {
+    order: 35;
+  }
+  .bio-details-18 {
+    order: 36;
+  }
+  .bio-card-19 {
+    order: 37;
+  }
+  .bio-details-19 {
+    order: 38;
+  }
+  .bio-card-20 {
+    order: 39;
+  }
+  .bio-details-20 {
+    order: 40;
+  }
+  .bio-card-21 {
+    order: 41;
+  }
+  .bio-details-21 {
+    order: 42;
+  }
+  .bio-card-22 {
+    order: 43;
+  }
+  .bio-details-22 {
+    order: 44;
+  }
+  .bio-card-23 {
+    order: 45;
+  }
+  .bio-details-23 {
+    order: 46;
+  }
+  .bio-card-24 {
+    order: 47;
+  }
+  .bio-details-24 {
+    order: 48;
+  }
+  .bio-card-25 {
+    order: 49;
+  }
+  .bio-details-25 {
+    order: 50;
+  }
+  .bio-card-26 {
+    order: 51;
+  }
+  .bio-details-26 {
+    order: 52;
+  }
+  .bio-card-27 {
+    order: 53;
+  }
+  .bio-details-27 {
+    order: 54;
+  }
+  .bio-card-28 {
+    order: 55;
+  }
+  .bio-details-28 {
+    order: 56;
+  }
+  .bio-card-29 {
+    order: 57;
+  }
+  .bio-details-29 {
+    order: 58;
+  }
+  .bio-card-30 {
+    order: 59;
+  }
+  .bio-details-30 {
+    order: 60;
   }
 }
 @media (max-width: 991.98px) {
