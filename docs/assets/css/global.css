@@ -12167,7 +12167,7 @@ footer svg {
     text-align: center;
   }
 }
-.cta-banner a {
+.cta-banner a:not(.btn) {
   color: #fff;
   text-decoration: underline;
 }
