@@ -124,7 +124,7 @@
 		text-align: center;
 	}
 
-	a {
+	a:not(.btn) {
 		color: $brand-white;
 		text-decoration: underline;
 	}
