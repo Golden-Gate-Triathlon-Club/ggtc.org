@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <h1 class="display-1">We are <span class="highlight">GGTC</span></h1>
+        <h1 class="">We are <span class="highlight">GGTC</span></h1>
         <div class="row">
           <div class="col-lg-12">
             <p class="lead">
