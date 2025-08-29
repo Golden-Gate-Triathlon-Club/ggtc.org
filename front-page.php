@@ -8,7 +8,9 @@
 if( have_rows('components') ):
     while( have_rows('components') ): the_row();
         if( get_row_layout() == 'hero-slider' ):
-            get_template_part('components/hero-slider');  
+            get_template_part('components/hero-slider'); 
+        elseif( get_row_layout() == 'cta-banner' ):
+            get_template_part('components/section-cta-banner');
         endif;
     endwhile;
 endif;
