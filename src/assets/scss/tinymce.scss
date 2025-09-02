@@ -1,3 +1,4 @@
+@import "components/vars";
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
@@ -5,6 +6,11 @@
 $opensans: "Open Sans", sans-serif;
 $barlow-condensed: "Barlow Condensed", sans-serif;
 $roboto: "Roboto", sans-serif;
+
+#tinymce {
+	padding: 30px;
+}
+
 html,
 body {
 	font-family: $roboto;
@@ -12,12 +18,11 @@ body {
 	line-height: 1.5;
 }
 
-.highlight,
-h1 strong {
-	color: $brand-red;
-	font-weight: 600;
-	.background-red & {
-		color: $brand-dark;
+body#tinymce {
+	.highlight,
+	h1 strong {
+		color: $brand-red;
+		font-weight: 600 !important;
 	}
 }
 
@@ -40,7 +45,6 @@ h2,
 h3,
 h4 {
 	font-family: $barlow-condensed;
-	margin-bottom: 30px;
 	line-height: 1;
 	font-weight: 600;
 }

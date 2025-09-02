@@ -1,7 +1,6 @@
 // Brand Colors
 $brand-red: #dd2b2e;
 $brand-dark: #231f20;
-
 $brand-blue: #0071bc;
 $brand-gray: #414042;
 $brand-white: #fff;
@@ -19,20 +18,25 @@ $font-size-base: 1.125rem; // 18px
 // Set the base line height
 $line-height-base: 1.5;
 
-$h1-min: 4.2rem; // ~67px
-$h1-max: 5.3333rem; // ~96px
-$h2-min: 2.45rem; // ~39px
-$h2-max: 3.5rem; // ~56px
-$h3-min: 1.4rem; // ~22px
-$h3-max: 2rem; // ~32px
-$h4-min: 1.125rem; // ~18px
-$h4-max: 1.5rem; // ~24px
+$h1-min: 3.722rem; // 67px
+$h1-max: 5.333rem; // 96px
+$h2-min: 2.167rem; // 39px
+$h2-max: 3.111rem; // 56px
+$h3-min: 1.222rem; // 22px
+$h3-max: 1.778rem; // 32px
+$h4-min: 1rem; // 18px
+$h4-max: 1.333rem; // 24px
 
 // Adjust vw multiplier up for aggressive scaling
-$h1-font-size: clamp(#{$h1-min}, 5vw, #{$h1-max});
-$h2-font-size: clamp(#{$h2-min}, 4vw, #{$h2-max});
-$h3-font-size: clamp(#{$h3-min}, 3vw, #{$h3-max});
-$h4-font-size: clamp(#{$h4-min}, 2vw, #{$h4-max});
+// Min value (67px) ends at 883 px. Max value (96px) starts at 1850 px.
+// https://modern-fluid-typography.vercel.app/?rootFontSize=18&minSize=67&fluidSize=3&relativeSize=2.25&maxSize=96
+$h1-font-size: clamp(#{$h1-min}, 3vw + 2.25rem, #{$h1-max});
+// Min value (39px) ends at 883 px. Max value (56px) starts at 1850 px.
+$h2-font-size: clamp(#{$h2-min}, 3vw + 2.25rem, #{$h2-max});
+// Min value (22px) ends at 883 px. Max value (32px) starts at 1850 px.
+$h3-font-size: clamp(#{$h3-min}, 3vw + 2.25rem, #{$h3-max});
+// Min value (18px) ends at 883 px. Max value (24px) starts at 1850 px.
+$h4-font-size: clamp(#{$h4-min}, 3vw + 2.25rem, #{$h4-max});
 
 h1,
 .h1 {

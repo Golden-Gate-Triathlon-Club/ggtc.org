@@ -1,5 +1,5 @@
 <?php 
-$cta_banner_background_color = get_sub_field("section_background_color"); 
+$section_background_color = get_sub_field("section_background_color"); 
 $cta_banner_headline = get_sub_field("cta_banner_headline");
 $cta_button_link = get_sub_field('cta_button_link');
 $cta_banner_button_url = isset($cta_button_link['url']) ? $cta_button_link['url'] : '';
@@ -9,11 +9,14 @@ $cta_banner_button_color = get_sub_field("cta_button_color");
 ?>
 
 
-<section id="cta" class="cta-banner <?php echo $cta_banner_background_color; ?> padding-y-100">
+<section id="cta" class="cta-banner <?php echo $section_background_color; ?> padding-y-100">
   <div class="container">
     <div class="row">
       <div class="col-lg-9">
         <h2><?php the_sub_field("cta_banner_headline"); ?></h2>
+        <?php if (get_sub_field("cta_banner_text")) : ?>
+        <p class="lead"><?php the_sub_field("cta_banner_text"); ?></p>
+        <?php endif; ?>
       </div>
       <div class="col-lg-3">
         <a href="<?php echo $cta_banner_button_url; ?>"

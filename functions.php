@@ -91,3 +91,73 @@ add_action('wp_enqueue_scripts', 'ggtc_enqueue_scripts');
 //     // Register your custom taxonomies here
 // }
 // add_action('init', 'ggtc_register_taxonomies');
+
+
+
+
+/**
+ * Add Google Fonts to WordPress Admin Head
+ * This ensures fonts are available in TinyMCE iframe
+ */
+function ggtc_admin_fonts() {
+    if (is_admin()) {
+        echo '<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">';
+        echo '<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">';
+    }
+}
+add_action('admin_head', 'ggtc_admin_fonts');
+
+/**
+ * TinyMCE Customization
+ */
+add_filter('tiny_mce_before_init', function ($mce_init) {
+    $custom_css = get_stylesheet_directory_uri() . '/docs/assets/css/tinymce.css'; // Your custom CSS file path
+    
+    if (isset($mce_init['content_css'])) {
+        $mce_init['content_css'] .= ',' . $custom_css;
+    } else {
+        $mce_init['content_css'] = $custom_css;
+    }
+
+    // Manually build the JS array string for textcolor_map
+    $palette = "[
+        'dd2b2e', 'Red',
+        '0071bc', 'Blue',
+        '231f20', 'Black',
+        'fffff', 'White',
+    ]";
+
+    // Assign the JS array string directly, not JSON encoded
+    $mce_init['textcolor_map'] = $palette;
+
+    // Disable custom colors to restrict selection to the palette
+    $mce_init['custom_colors'] = false;
+
+    // Ensure fonts are available in TinyMCE iframe
+    $mce_init['font_formats'] = 'Barlow Condensed=Barlow Condensed, sans-serif; Roboto=Roboto, sans-serif; Arial=arial,helvetica,sans-serif; Times New Roman=times new roman,times,serif; Courier New=courier new,courier,monospace';
+
+    // Customize block formats - remove H5, H6, and Preformatted
+    $mce_init['block_formats'] = 'Paragraph=p;Heading 1=h1;Heading 2=h2;Heading 3=h3;Heading 4=h4';
+
+    // Add Google Fonts to TinyMCE iframe head
+    $mce_init['setup'] = 'function(ed) {
+        ed.on("init", function() {
+            var iframe = ed.getContainer().querySelector("iframe");
+            if (iframe && iframe.contentDocument) {
+                var head = iframe.contentDocument.head;
+                
+                var link1 = iframe.contentDocument.createElement("link");
+                link1.href = "https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap";
+                link1.rel = "stylesheet";
+                head.appendChild(link1);
+                
+                var link2 = iframe.contentDocument.createElement("link");
+                link2.href = "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap";
+                link2.rel = "stylesheet";
+                head.appendChild(link2);
+            }
+        });
+    }';
+
+    return $mce_init;
+});
