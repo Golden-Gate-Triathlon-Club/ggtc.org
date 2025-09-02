@@ -8,8 +8,8 @@ $cta_banner_button_target = isset($cta_button_link['target']) ? $cta_button_link
 $cta_banner_button_color = get_sub_field("cta_button_color");
 ?>
 
-
-<section id="cta" class="cta-banner <?php echo $section_background_color; ?> padding-y-100">
+<section id="cta-banner-<?php echo get_row_index(); ?>"
+  class="section-<?php echo get_row_index(); ?> cta-banner <?php echo $section_background_color; ?> padding-y-100">
   <div class="container">
     <div class="row">
       <div class="col-lg-9">

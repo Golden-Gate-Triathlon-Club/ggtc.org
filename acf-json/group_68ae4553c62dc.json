@@ -301,6 +301,60 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_68b63cb79304a": {
+                    "key": "layout_68b63cb79304a",
+                    "name": "photo-banner-full-width",
+                    "label": "Photo Banner (full width)",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_68b63cb79304c",
+                            "label": "Photo Banner Section Description",
+                            "name": "",
+                            "aria-label": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Full width photo banner section. Best for landscape photos.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        },
+                        {
+                            "key": "field_68b63cf29304f",
+                            "label": "Photo Banner Photo",
+                            "name": "photo_banner_photo",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "Large landscape photos only.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "library": "all",
+                            "min_width": 1500,
+                            "min_height": 600,
+                            "min_size": "",
+                            "max_width": 4000,
+                            "max_height": 4000,
+                            "max_size": "",
+                            "mime_types": "",
+                            "allow_in_bindings": 0,
+                            "preview_size": "large"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -333,5 +387,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1756768393
+    "modified": 1756774251
 }

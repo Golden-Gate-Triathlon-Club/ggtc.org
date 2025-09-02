@@ -4,7 +4,7 @@
  * Uses ACF flexible content fields for dynamic content management
  */
 ?>
-<section class="hero-slider">
+<section id="hero-slider-<?php echo get_row_index(); ?>" class="section-<?php echo get_row_index(); ?> hero-slider">
   <div class="swiper swiper-hero-slider">
     <div class="swiper-wrapper">
       <?php if (have_rows('hero_slider')) : ?>

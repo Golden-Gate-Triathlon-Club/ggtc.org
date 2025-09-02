@@ -139,25 +139,114 @@ add_filter('tiny_mce_before_init', function ($mce_init) {
     // Customize block formats - remove H5, H6, and Preformatted
     $mce_init['block_formats'] = 'Paragraph=p;Heading 1=h1;Heading 2=h2;Heading 3=h3;Heading 4=h4';
 
-    // Add Google Fonts to TinyMCE iframe head
+    // Add Google Fonts to TinyMCE iframe head and prevent empty paragraphs
     $mce_init['setup'] = 'function(ed) {
-        ed.on("init", function() {
-            var iframe = ed.getContainer().querySelector("iframe");
-            if (iframe && iframe.contentDocument) {
-                var head = iframe.contentDocument.head;
+        ed.on("init", () => {
+            const iframe = ed.getContainer().querySelector("iframe");
+            if (iframe?.contentDocument) {
+                const { head } = iframe.contentDocument;
                 
-                var link1 = iframe.contentDocument.createElement("link");
+                const link1 = iframe.contentDocument.createElement("link");
                 link1.href = "https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap";
                 link1.rel = "stylesheet";
                 head.appendChild(link1);
                 
-                var link2 = iframe.contentDocument.createElement("link");
+                const link2 = iframe.contentDocument.createElement("link");
                 link2.href = "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap";
                 link2.rel = "stylesheet";
                 head.appendChild(link2);
+            }
+        });
+        
+        // Prevent empty paragraphs and clean up existing ones
+        ed.on("BeforeSetContent", (e) => {
+            // Remove empty paragraphs with &nbsp; or just whitespace
+            e.content = e.content.replace(/<p[^>]*>(\s|&nbsp;)*<\/p>/gi, "");
+            e.content = e.content.replace(/<p[^>]*>\s*<\/p>/gi, "");
+            e.content = e.content.replace(/<p[^>]*>[\r\n\s]*<\/p>/gi, "");
+            e.content = e.content.replace(/(<p[^>]*>(\s|&nbsp;)*<\/p>\s*){2,}/gi, "");
+        });
+        
+        // Clean up content when saving
+        ed.on("SaveContent", (e) => {
+            // Remove empty paragraphs with &nbsp; or just whitespace
+            e.content = e.content.replace(/<p[^>]*>(\s|&nbsp;)*<\/p>/gi, "");
+            e.content = e.content.replace(/<p[^>]*>\s*<\/p>/gi, "");
+            e.content = e.content.replace(/<p[^>]*>[\r\n\s]*<\/p>/gi, "");
+            e.content = e.content.replace(/(<p[^>]*>(\s|&nbsp;)*<\/p>\s*){2,}/gi, "");
+        });
+        
+        // Clean up on paste
+        ed.on("PastePostProcess", (e) => {
+            e.node.innerHTML = e.node.innerHTML.replace(/<p[^>]*>(\s|&nbsp;)*<\/p>/gi, "");
+            e.node.innerHTML = e.node.innerHTML.replace(/<p[^>]*>\s*<\/p>/gi, "");
+            e.node.innerHTML = e.node.innerHTML.replace(/<p[^>]*>[\r\n\s]*<\/p>/gi, "");
+        });
+        
+        // Prevent creation of empty paragraphs on Enter key
+        ed.on("keydown", (e) => {
+            if (e.keyCode === 13) { // Enter key
+                const selection = ed.selection;
+                const node = selection.getNode();
+                
+                // If current paragraph is empty, prevent creating another empty one
+                if (node?.nodeName === "P" && (node.innerHTML.trim() === "" || node.innerHTML === "&nbsp;")) {
+                    e.preventDefault();
+                    return false;
+                }
             }
         });
     }';
 
     return $mce_init;
 });
+
+/**
+ * Clean up empty paragraphs in content
+ * Removes <p>&nbsp;</p> and other empty paragraph variations
+ */
+function ggtc_clean_empty_paragraphs($content) {
+    if (empty($content)) {
+        return $content;
+    }
+    
+    // Remove empty paragraphs with &nbsp; or just whitespace
+    $content = preg_replace('/<p[^>]*>(\s|&nbsp;)*<\/p>/i', '', $content);
+    $content = preg_replace('/<p[^>]*>\s*<\/p>/i', '', $content);
+    
+    // Remove multiple consecutive empty paragraphs
+    $content = preg_replace('/(<p[^>]*>(\s|&nbsp;)*<\/p>\s*){2,}/i', '', $content);
+    
+    // Remove empty paragraphs with only line breaks
+    $content = preg_replace('/<p[^>]*>[\r\n\s]*<\/p>/i', '', $content);
+    
+    // Clean up any remaining whitespace between tags
+    $content = preg_replace('/>\s+</', '><', $content);
+    
+    return $content;
+}
+
+// Apply the filter to post content
+add_filter('the_content', 'ggtc_clean_empty_paragraphs');
+
+// Apply the filter to ACF WYSIWYG fields (for get_sub_field)
+add_filter('acf/format_value/type=wysiwyg', 'ggtc_clean_empty_paragraphs');
+
+// Apply the filter to ACF WYSIWYG fields (for the_sub_field)
+add_filter('acf/load_value/type=wysiwyg', 'ggtc_clean_empty_paragraphs');
+
+// Also apply to all ACF field outputs
+add_filter('acf_the_content', 'ggtc_clean_empty_paragraphs');
+
+// Apply to all content output (catch-all)
+add_filter('acf/format_value', function($value, $post_id, $field) {
+    if ($field['type'] === 'wysiwyg') {
+        return ggtc_clean_empty_paragraphs($value);
+    }
+    return $value;
+}, 10, 3);
+
+// Additional filter for ACF sub fields
+add_filter('acf/load_value/name=text_section_content', 'ggtc_clean_empty_paragraphs');
+add_filter('acf/load_value/name=cta_banner_text', 'ggtc_clean_empty_paragraphs');
+add_filter('acf/load_value/name=slider_text', 'ggtc_clean_empty_paragraphs');
