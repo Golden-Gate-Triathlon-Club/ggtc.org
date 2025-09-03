@@ -54,6 +54,8 @@
                 'post_type' => 'sponsor',
                 'numberposts' => -1,
                 'post_status' => 'publish',
+                'orderby' => 'title',
+                'order' => 'ASC',
                 'tax_query' => array(
                   array(
                     'taxonomy' => 'sponsor-level',
@@ -92,8 +94,6 @@
                       <h3 class="sponsor-name">
                         <?php echo esc_html($sponsor_post->post_title); ?>
                       </h3>
-
-
                     </div>
                   </div>
 

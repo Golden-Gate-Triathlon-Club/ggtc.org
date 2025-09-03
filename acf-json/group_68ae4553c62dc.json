@@ -117,6 +117,42 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_68b8cbf693be1": {
+                    "key": "layout_68b8cbf693be1",
+                    "name": "hero",
+                    "label": "Hero",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_68b8cc1093be6",
+                            "label": "Hero Image",
+                            "name": "hero_image",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "allow_in_bindings": 0,
+                            "preview_size": "medium"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_68b1f06e02fe5": {
                     "key": "layout_68b1f06e02fe5",
                     "name": "cta-banner",
@@ -447,6 +483,13 @@
                 "operator": "==",
                 "value": "post"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "sponsor"
+            }
         ]
     ],
     "menu_order": 0,
@@ -458,5 +501,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1756935053
+    "modified": 1756941418
 }

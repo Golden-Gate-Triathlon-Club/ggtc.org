@@ -1,6 +1,27 @@
 <?php get_header();?>
+
+
 <section class="hero">
+  <?php
+  $hero_image = null;
+  if( have_rows('components') ):
+      while( have_rows('components') ): the_row();
+          if( get_row_layout() == 'hero' ): 
+            $hero_image = get_sub_field('hero_image');
+            break; // Exit loop once we find the hero layout
+          endif;
+      endwhile; 
+  endif;
+
+  if ($hero_image): ?>
+  <img src="<?php echo esc_url($hero_image['url']); ?>"
+    alt="<?php echo esc_attr($hero_image['alt'] ?: get_the_title()); ?>">
+
+  <?php else: ?>
+
   <img src="<?php echo get_template_directory_uri(); ?>/docs/assets/img/page-hero-run.webp" alt="">
+  <?php endif; ?>
+
   <div class="caption">
     <div class="container">
       <div class="row">
