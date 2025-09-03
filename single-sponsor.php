@@ -48,6 +48,7 @@
     </div>
   </div>
 </section>
+<?php get_template_part('components/breadcrumbs'); ?>
 
 <main id="site-content" role="main" class="padding-y-100">
   <?php if (have_posts()) : while ( have_posts() ) : the_post();?>
@@ -61,7 +62,7 @@
             $sponsor_logo = get_field('sponsor_logo');
             if ($sponsor_logo) :
           ?>
-          <div class="logo mb-5">
+          <div class="sponsor-logo mb-5">
             <img src="<?php echo esc_url($sponsor_logo['url']); ?>"
               alt="<?php echo esc_attr($sponsor_logo['alt'] ?: get_the_title()); ?>">
           </div>
@@ -71,14 +72,36 @@
 
           <?php 
           // Only show sponsor details if user is logged in
+          // if (ggtc_is_logged_in()) {
+          //   the_field('sponsor_details');
+          // } else {
+          //   echo '<div class="login-required">';
+          //   echo '<p>Please <a href="' . wp_login_url(get_permalink()) . '">log in</a> to view sponsor details.</p>';
+          //   echo '</div>';
+          // }
+          ?>
+
+
+
+          <?php
+          // Only show components if user is logged in
           if (ggtc_is_logged_in()) {
-            the_field('sponsor_details');
+            if( have_rows('components') ):
+                while( have_rows('components') ): the_row();
+                    if( get_row_layout() == 'cta-banner' ):
+                        get_template_part('components/section-cta-banner');
+                    elseif( get_row_layout() == 'text-section-1-column' ):
+                        get_template_part('components/section-text-1-column');
+                    elseif( get_row_layout() == 'photo-banner-full-width' ):
+                        get_template_part('components/section-photo-banner-full-width');
+                    endif;
+                endwhile;
+            endif;
           } else {
-            echo '<div class="login-required">';
-            echo '<p>Please <a href="' . wp_login_url(get_permalink()) . '">log in</a> to view sponsor details.</p>';
-            echo '</div>';
+            get_template_part('components/restricted-content');
           }
           ?>
+
 
 
         </div>

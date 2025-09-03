@@ -44,7 +44,7 @@
                 <li><a class="dropdown-item" href="#">Code of Conduct</a></li>
                 <li><a class="dropdown-item" href="#">Board Members</a></li>
                 <li><a class="dropdown-item" href="#">Ambassador Team</a></li>
-                <li><a class="dropdown-item" href="#">Sponsors</a></li>
+                <li><a class="dropdown-item" href="/sponsors">Sponsors</a></li>
                 <li><a class="dropdown-item" href="#">Social</a></li>
                 <li><a class="dropdown-item" href="#">Triathlon Survival Checklist</a></li>
                 <li><a class="dropdown-item" href="#">Donate</a></li>

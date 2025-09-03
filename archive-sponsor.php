@@ -15,6 +15,8 @@
   </div>
 </section>
 
+<?php get_template_part('components/breadcrumbs'); ?>
+
 <main id="site-content" role="main" class="padding-y-100">
   <div class="container">
     <div class="row">

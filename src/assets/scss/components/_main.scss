@@ -1,8 +1,13 @@
 main {
 	// padding: 40px 0;
-	aside {
-	}
-
-	article {
+	a:not(.btn):not(.breadcrumb-link):not(.card) {
+		color: $brand-red;
+		text-decoration: underline;
+		text-underline-offset: 6px;
+		text-decoration-thickness: 2px;
+		transition: color 0.3s ease-in-out;
+		&:hover {
+			color: $brand-dark;
+		}
 	}
 }

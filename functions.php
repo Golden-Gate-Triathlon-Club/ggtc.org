@@ -394,3 +394,142 @@ function ggtc_logged_in_content($content, $login_message = null) {
         return '<div class="login-required">' . $message . '</div>';
     }
 }
+
+/**
+ * Basic Breadcrumb Function
+ * Displays breadcrumb navigation for the current page
+ */
+function the_breadcrumb() {
+    $separator = ' / ';
+    $home_title = 'Home';
+    
+    // Get the home URL
+    $home_url = home_url('/');
+    
+    // Start building the breadcrumb
+    $breadcrumb = '<nav class="breadcrumb-nav" aria-label="Breadcrumb">';
+    $breadcrumb .= '<ol class="breadcrumb-list">';
+    
+    // Always start with Home
+    $breadcrumb .= '<li class="breadcrumb-item breadcrumb-home">';
+    $breadcrumb .= '<a href="' . esc_url($home_url) . '" class="breadcrumb-link">' . esc_html($home_title) . '</a>';
+    $breadcrumb .= '</li>';
+    
+    // Check if we're on the home page
+    if (is_front_page()) {
+        // Don't add anything else for home page
+    } elseif (is_home()) {
+        // Blog page
+        $breadcrumb .= '<li class="breadcrumb-item breadcrumb-current">';
+        $breadcrumb .= '<span class="breadcrumb-separator">' . $separator . '</span>';
+        $breadcrumb .= '<span class="breadcrumb-text">Blog</span>';
+        $breadcrumb .= '</li>';
+    } elseif (is_page()) {
+        // Regular page
+        $page_id = get_the_ID();
+        $ancestors = get_post_ancestors($page_id);
+        
+        // Add parent pages in reverse order
+        if ($ancestors) {
+            $ancestors = array_reverse($ancestors);
+            foreach ($ancestors as $ancestor_id) {
+                $breadcrumb .= '<li class="breadcrumb-item">';
+                $breadcrumb .= '<span class="breadcrumb-separator">' . $separator . '</span>';
+                $breadcrumb .= '<a href="' . esc_url(get_permalink($ancestor_id)) . '" class="breadcrumb-link">';
+                $breadcrumb .= esc_html(get_the_title($ancestor_id));
+                $breadcrumb .= '</a>';
+                $breadcrumb .= '</li>';
+            }
+        }
+        
+        // Add current page
+        $breadcrumb .= '<li class="breadcrumb-item breadcrumb-current">';
+        $breadcrumb .= '<span class="breadcrumb-separator">' . $separator . '</span>';
+        $breadcrumb .= '<span class="breadcrumb-text">' . esc_html(get_the_title()) . '</span>';
+        $breadcrumb .= '</li>';
+    } elseif (is_single()) {
+        // Single post
+        $post_type = get_post_type();
+        
+        if ($post_type === 'post') {
+            // Regular blog post
+            $blog_page_id = get_option('page_for_posts');
+            if ($blog_page_id) {
+                $breadcrumb .= '<li class="breadcrumb-item">';
+                $breadcrumb .= '<span class="breadcrumb-separator">' . $separator . '</span>';
+                $breadcrumb .= '<a href="' . esc_url(get_permalink($blog_page_id)) . '" class="breadcrumb-link">Blog</a>';
+                $breadcrumb .= '</li>';
+            }
+        } else {
+            // Custom post type - add archive link
+            $post_type_obj = get_post_type_object($post_type);
+            if ($post_type_obj) {
+                $archive_url = get_post_type_archive_link($post_type);
+                if ($archive_url) {
+                    $breadcrumb .= '<li class="breadcrumb-item">';
+                    $breadcrumb .= '<span class="breadcrumb-separator">' . $separator . '</span>';
+                    $breadcrumb .= '<a href="' . esc_url($archive_url) . '" class="breadcrumb-link">';
+                    $breadcrumb .= esc_html($post_type_obj->labels->name);
+                    $breadcrumb .= '</a>';
+                    $breadcrumb .= '</li>';
+                }
+            }
+        }
+        
+        // Add current post
+        $breadcrumb .= '<li class="breadcrumb-item breadcrumb-current">';
+        $breadcrumb .= '<span class="breadcrumb-separator">' . $separator . '</span>';
+        $breadcrumb .= '<span class="breadcrumb-text">' . esc_html(get_the_title()) . '</span>';
+        $breadcrumb .= '</li>';
+    } elseif (is_category()) {
+        // Category archive
+        $breadcrumb .= '<li class="breadcrumb-item">';
+        $breadcrumb .= '<span class="breadcrumb-separator">' . $separator . '</span>';
+        $breadcrumb .= '<a href="' . esc_url(get_permalink(get_option('page_for_posts'))) . '" class="breadcrumb-link">Blog</a>';
+        $breadcrumb .= '</li>';
+        
+        $breadcrumb .= '<li class="breadcrumb-item breadcrumb-current">';
+        $breadcrumb .= '<span class="breadcrumb-separator">' . $separator . '</span>';
+        $breadcrumb .= '<span class="breadcrumb-text">' . esc_html(single_cat_title('', false)) . '</span>';
+        $breadcrumb .= '</li>';
+    } elseif (is_tag()) {
+        // Tag archive
+        $breadcrumb .= '<li class="breadcrumb-item">';
+        $breadcrumb .= '<span class="breadcrumb-separator">' . $separator . '</span>';
+        $breadcrumb .= '<a href="' . esc_url(get_permalink(get_option('page_for_posts'))) . '" class="breadcrumb-link">Blog</a>';
+        $breadcrumb .= '</li>';
+        
+        $breadcrumb .= '<li class="breadcrumb-item breadcrumb-current">';
+        $breadcrumb .= '<span class="breadcrumb-separator">' . $separator . '</span>';
+        $breadcrumb .= '<span class="breadcrumb-text">Tag: ' . esc_html(single_tag_title('', false)) . '</span>';
+        $breadcrumb .= '</li>';
+    } elseif (is_post_type_archive()) {
+        // Custom post type archive
+        $post_type = get_query_var('post_type');
+        $post_type_obj = get_post_type_object($post_type);
+        
+        if ($post_type_obj) {
+            $breadcrumb .= '<li class="breadcrumb-item breadcrumb-current">';
+            $breadcrumb .= '<span class="breadcrumb-separator">' . $separator . '</span>';
+            $breadcrumb .= '<span class="breadcrumb-text">' . esc_html($post_type_obj->labels->name) . '</span>';
+            $breadcrumb .= '</li>';
+        }
+    } elseif (is_search()) {
+        // Search results
+        $breadcrumb .= '<li class="breadcrumb-item breadcrumb-current">';
+        $breadcrumb .= '<span class="breadcrumb-separator">' . $separator . '</span>';
+        $breadcrumb .= '<span class="breadcrumb-text">Search Results for: "' . esc_html(get_search_query()) . '"</span>';
+        $breadcrumb .= '</li>';
+    } elseif (is_404()) {
+        // 404 page
+        $breadcrumb .= '<li class="breadcrumb-item breadcrumb-current">';
+        $breadcrumb .= '<span class="breadcrumb-separator">' . $separator . '</span>';
+        $breadcrumb .= '<span class="breadcrumb-text">Page Not Found</span>';
+        $breadcrumb .= '</li>';
+    }
+    
+    $breadcrumb .= '</ol>';
+    $breadcrumb .= '</nav>';
+    
+    echo $breadcrumb;
+}
