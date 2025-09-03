@@ -11959,6 +11959,9 @@ header a:hover {
   color: #fff;
 }
 
+.hero {
+  position: relative;
+}
 .hero img {
   height: 400px;
   width: 100%;
@@ -11969,6 +11972,20 @@ header a:hover {
   .hero img {
     height: 250px;
   }
+}
+.hero .caption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  color: #fff;
+  background-color: rgba(221, 43, 46, 0.8);
+  z-index: 2;
+  padding: 15px 0;
+  font-size: 20px;
+}
+.hero .caption h1, .hero .caption .h1 {
+  margin-bottom: 0;
 }
 
 .navbar a:not(.btn) {
@@ -12081,6 +12098,15 @@ footer svg {
 .btn.btn-outline-primary:hover {
   background-color: #fff;
   color: #dd2b2e;
+}
+.btn.btn-outline {
+  background-color: transparent;
+  color: #dd2b2e;
+  border: 2px solid #dd2b2e;
+}
+.btn.btn-outline:hover {
+  background-color: #dd2b2e;
+  color: #fff;
 }
 
 .anouncement-banner {

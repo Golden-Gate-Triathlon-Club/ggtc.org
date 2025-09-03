@@ -24,10 +24,7 @@ add_filter('acf/settings/save_json', 'ggtc_acf_json_save_point');
  * Loads ACF field definitions from JSON files in the theme directory
  */
 function ggtc_acf_json_load_point($paths) {
-    // Remove the original path
-    unset($paths[0]);
-    
-    // Add our custom path
+    // Add our custom path without removing the original
     $paths[] = get_stylesheet_directory() . '/acf-json';
     
     return $paths;
@@ -250,3 +247,150 @@ add_filter('acf/format_value', function($value, $post_id, $field) {
 add_filter('acf/load_value/name=text_section_content', 'ggtc_clean_empty_paragraphs');
 add_filter('acf/load_value/name=cta_banner_text', 'ggtc_clean_empty_paragraphs');
 add_filter('acf/load_value/name=slider_text', 'ggtc_clean_empty_paragraphs');
+
+
+// Allow SVG uploads in WordPress
+function ggtc_allow_svg_uploads($mimes) {
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+}
+add_filter('upload_mimes', 'ggtc_allow_svg_uploads');
+
+// Optional: Fix SVG display in media library
+function ggtc_fix_svg_display() {
+    echo '<style>
+        .attachment-266x266, .thumbnail img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    </style>';
+}
+add_action('admin_head', 'ggtc_fix_svg_display');
+
+/**
+ * Debug function to check if custom post types and taxonomies are registered
+ * Remove this after debugging
+ */
+function ggtc_debug_post_types() {
+    if (current_user_can('manage_options') && isset($_GET['debug_post_types'])) {
+        echo '<h3>Registered Post Types:</h3>';
+        $post_types = get_post_types(array('public' => true), 'objects');
+        foreach ($post_types as $post_type) {
+            echo '<p><strong>' . $post_type->name . '</strong>: ' . $post_type->label . '</p>';
+        }
+        
+        echo '<h3>Registered Taxonomies:</h3>';
+        $taxonomies = get_taxonomies(array('public' => true), 'objects');
+        foreach ($taxonomies as $taxonomy) {
+            echo '<p><strong>' . $taxonomy->name . '</strong>: ' . $taxonomy->label . '</p>';
+        }
+        
+        echo '<h3>Sponsor Posts:</h3>';
+        $sponsors = get_posts(array(
+            'post_type' => 'sponsor',
+            'numberposts' => -1,
+            'post_status' => 'publish'
+        ));
+        echo '<p>Found ' . count($sponsors) . ' sponsor posts</p>';
+        
+        echo '<h3>Sponsor Levels:</h3>';
+        $sponsor_levels = get_terms(array(
+            'taxonomy' => 'sponsor-level',
+            'hide_empty' => false
+        ));
+        if (!is_wp_error($sponsor_levels)) {
+            echo '<p>Found ' . count($sponsor_levels) . ' sponsor levels</p>';
+            foreach ($sponsor_levels as $level) {
+                echo '<p>- ' . $level->name . ' (' . $level->slug . ')</p>';
+            }
+        } else {
+            echo '<p>Error: ' . $sponsor_levels->get_error_message() . '</p>';
+        }
+    }
+}
+add_action('wp_footer', 'ggtc_debug_post_types');
+
+/**
+ * Force refresh permalinks on theme activation
+ */
+function ggtc_flush_rewrite_rules() {
+    // Force flush rewrite rules to register custom post types
+    flush_rewrite_rules();
+}
+add_action('after_switch_theme', 'ggtc_flush_rewrite_rules');
+
+/**
+ * Additional debugging for ACF JSON loading
+ */
+function ggtc_debug_acf_json() {
+    if (current_user_can('manage_options') && isset($_GET['debug_acf'])) {
+        echo '<h3>ACF JSON Debug:</h3>';
+        
+        // Check if ACF is active
+        if (function_exists('acf_get_setting')) {
+            echo '<p>ACF Plugin: Active</p>';
+            
+            // Check JSON paths
+            $json_paths = acf_get_setting('load_json');
+            echo '<p>ACF JSON Paths:</p><ul>';
+            foreach ($json_paths as $path) {
+                echo '<li>' . $path . '</li>';
+            }
+            echo '</ul>';
+            
+            // Check if our path exists
+            $our_path = get_stylesheet_directory() . '/acf-json';
+            echo '<p>Our ACF JSON Path: ' . $our_path . '</p>';
+            echo '<p>Path exists: ' . (file_exists($our_path) ? 'Yes' : 'No') . '</p>';
+            
+            if (file_exists($our_path)) {
+                $files = scandir($our_path);
+                echo '<p>Files in directory:</p><ul>';
+                foreach ($files as $file) {
+                    if ($file !== '.' && $file !== '..') {
+                        echo '<li>' . $file . '</li>';
+                    }
+                }
+                echo '</ul>';
+            }
+        } else {
+            echo '<p>ACF Plugin: NOT ACTIVE</p>';
+        }
+    }
+}
+add_action('wp_footer', 'ggtc_debug_acf_json');
+
+/**
+ * Show all sponsors on archive page (no pagination)
+ */
+function ggtc_show_all_sponsors($query) {
+    if (!is_admin() && $query->is_main_query()) {
+        if (is_post_type_archive('sponsor')) {
+            $query->set('posts_per_page', -1);
+        }
+    }
+}
+add_action('pre_get_posts', 'ggtc_show_all_sponsors');
+
+/**
+ * Check if user is logged in (for use in if statements)
+ * Usage: if (ggtc_is_logged_in()) { // show content }
+ */
+function ggtc_is_logged_in() {
+    return is_user_logged_in();
+}
+
+/**
+ * Conditional content wrapper for logged-in users
+ * Usage: ggtc_logged_in_content('Your content here', 'Custom login message');
+ */
+function ggtc_logged_in_content($content, $login_message = null) {
+    if (is_user_logged_in()) {
+        return $content;
+    } else {
+        $default_message = 'Please <a href="' . wp_login_url(get_permalink()) . '">log in</a> to view this content.';
+        $message = $login_message ?: $default_message;
+        
+        return '<div class="login-required">' . $message . '</div>';
+    }
+}

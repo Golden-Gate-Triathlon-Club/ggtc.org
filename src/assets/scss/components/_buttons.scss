@@ -53,4 +53,14 @@
 			color: $brand-red;
 		}
 	}
+
+	&.btn-outline {
+		background-color: transparent;
+		color: $brand-red;
+		border: 2px solid $brand-red;
+		&:hover {
+			background-color: $brand-red;
+			color: $brand-white;
+		}
+	}
 }
