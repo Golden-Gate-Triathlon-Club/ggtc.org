@@ -55,7 +55,7 @@
   <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <div class="container">
       <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-6">
 
 
           <?php 
@@ -63,26 +63,28 @@
             if ($sponsor_logo) :
           ?>
           <div class="sponsor-logo mb-5">
-            <img src="<?php echo esc_url($sponsor_logo['url']); ?>"
+            <img class="mx-auto d-block" src="<?php echo esc_url($sponsor_logo['url']); ?>"
               alt="<?php echo esc_attr($sponsor_logo['alt'] ?: get_the_title()); ?>">
           </div>
 
           <?php endif; ?>
 
+        </div>
 
+        <div class="col-lg-6 text-center">
           <?php 
-          // Only show sponsor details if user is logged in
-          // if (ggtc_is_logged_in()) {
-          //   the_field('sponsor_details');
-          // } else {
-          //   echo '<div class="login-required">';
-          //   echo '<p>Please <a href="' . wp_login_url(get_permalink()) . '">log in</a> to view sponsor details.</p>';
-          //   echo '</div>';
-          // }
+          $sponsor_website = get_field('sponsor_website');
+          if ($sponsor_website) :
           ?>
 
+          <a href="<?php echo esc_url($sponsor_website); ?>" target="_blank" rel="noopener noreferrer"
+            class="btn btn-primary">
+            Visit Website
+          </a>
 
-
+          <?php endif; ?>
+        </div>
+        <div class="col-lg-12">
           <?php
           // Only show components if user is logged in
           if (ggtc_is_logged_in()) {
@@ -101,9 +103,6 @@
             get_template_part('components/restricted-content');
           }
           ?>
-
-
-
         </div>
       </div>
     </div>
