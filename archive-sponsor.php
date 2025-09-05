@@ -74,6 +74,7 @@
           <div class="sponsor-level-section mb-5">
             <h2 id="<?php echo esc_attr($level_slug); ?>" class="sponsor-level-title mb-4">
               <?php echo esc_html($level->name); ?></h2>
+            <hr>
             <div class="row">
               <?php foreach ($sponsors_in_level as $sponsor_post) : 
                 setup_postdata($sponsor_post);

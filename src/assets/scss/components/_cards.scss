@@ -2,6 +2,20 @@
 	&:hover {
 		cursor: pointer;
 	}
+
+	img {
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+		max-height: 300px;
+		min-height: 300px;
+		object-position: top;
+	}
+
+	svg {
+		width: 40px;
+		height: auto;
+	}
 }
 
 .board-bio-list {
@@ -14,17 +28,18 @@
 .bio-card {
 	flex: 1 1 calc((100% - var(--flex-gap) * 2) / 3);
 	max-width: calc((100% - var(--flex-gap) * 2) / 3);
+	transition: all 0.3s ease-in-out;
 
 	// add arrow to top of bio when card is selected
 	&.selected {
-		// transform: scale(1.03);
-		// transition: transform 0.3s ease-in-out;
+		transform: scale(1.03);
 		position: relative;
+		border: 1px solid $brand-red;
 		&:after {
-			border-color: transparent transparent $brand-white transparent;
+			border-color: $brand-red transparent transparent transparent;
 			border-style: solid;
-			border-width: 0 7px 12px 7px;
-			bottom: -31px;
+			border-width: 12px 7px 0 7px;
+			bottom: -12px;
 			content: "";
 			height: 0;
 			left: 50%;
@@ -38,10 +53,10 @@
 	@include media-breakpoint-down(lg) {
 		position: relative;
 		&:after {
-			border-color: transparent transparent $brand-white transparent;
+			border-color: $brand-red transparent transparent transparent;
 			border-style: solid;
-			border-width: 0 7px 12px 7px;
-			bottom: -31px;
+			border-width: 12px 7px 0 7px;
+			bottom: -12px;
 			content: "";
 			height: 0;
 			left: 50%;

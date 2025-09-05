@@ -4,27 +4,28 @@
       <div class="col-lg-12">
         <nav>
           <ul class="d-flex gap-3 list-unstyled justify-content-center align-items-center flex-column flex-lg-row">
-            <li class="">
-              <a href=""><img src="<?php echo get_template_directory_uri(); ?>/docs/assets/img/ggtc-logo.svg"
+            <li>
+              <a href="<?php echo esc_url(home_url('/')); ?>"><img
+                  src="<?php echo get_template_directory_uri(); ?>/docs/assets/img/ggtc-logo.svg"
                   alt="Golden Gate Triathlon Club"></a>
             </li>
-            <li class="">
-              <a class="" href="">About</a>
+            <li>
+              <a href="">About</a>
             </li>
-            <li class="">
-              <a class="" href="">Calendar</a>
+            <li>
+              <a href="">Calendar</a>
             </li>
-            <li class="">
-              <a class="" href="">Sports</a>
+            <li>
+              <a href="">Sports</a>
             </li>
-            <li class="">
-              <a class="" href="">Community</a>
+            <li>
+              <a href="">Community</a>
             </li>
-            <li class="">
-              <a class="" href="">Training Programs</a>
+            <li>
+              <a href="">Training Programs</a>
             </li>
-            <li class="">
-              <a class="" href="">Why Join</a>
+            <li>
+              <a href="">Why Join</a>
             </li>
 
             <li class="ms-lg-auto">

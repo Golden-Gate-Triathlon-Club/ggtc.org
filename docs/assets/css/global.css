@@ -12519,6 +12519,18 @@ main a:not(.btn):not(.breadcrumb-link):not(.card):hover {
 .bio-card:hover {
   cursor: pointer;
 }
+.bio-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 300px;
+  min-height: 300px;
+  object-position: top;
+}
+.bio-card svg {
+  width: 40px;
+  height: auto;
+}
 
 .board-bio-list {
   display: flex;
@@ -12530,15 +12542,18 @@ main a:not(.btn):not(.breadcrumb-link):not(.card):hover {
 .bio-card {
   flex: 1 1 calc((100% - var(--flex-gap) * 2) / 3);
   max-width: calc((100% - var(--flex-gap) * 2) / 3);
+  transition: all 0.3s ease-in-out;
 }
 .bio-card.selected {
+  transform: scale(1.03);
   position: relative;
+  border: 1px solid #dd2b2e;
 }
 .bio-card.selected:after {
-  border-color: transparent transparent #fff transparent;
+  border-color: #dd2b2e transparent transparent transparent;
   border-style: solid;
-  border-width: 0 7px 12px 7px;
-  bottom: -31px;
+  border-width: 12px 7px 0 7px;
+  bottom: -12px;
   content: "";
   height: 0;
   left: 50%;
@@ -12551,10 +12566,10 @@ main a:not(.btn):not(.breadcrumb-link):not(.card):hover {
     position: relative;
   }
   .bio-card:after {
-    border-color: transparent transparent #fff transparent;
+    border-color: #dd2b2e transparent transparent transparent;
     border-style: solid;
-    border-width: 0 7px 12px 7px;
-    bottom: -31px;
+    border-width: 12px 7px 0 7px;
+    bottom: -12px;
     content: "";
     height: 0;
     left: 50%;
