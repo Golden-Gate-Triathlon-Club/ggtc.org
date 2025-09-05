@@ -29,6 +29,32 @@
             "preview_size": "medium"
         },
         {
+            "key": "field_68bb6028ef08a",
+            "label": "Profile Type",
+            "name": "profile_type",
+            "aria-label": "",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "profile-type",
+            "add_term": 0,
+            "save_terms": 1,
+            "load_terms": 1,
+            "return_format": "id",
+            "field_type": "checkbox",
+            "allow_in_bindings": 0,
+            "bidirectional": 0,
+            "multiple": 0,
+            "allow_null": 0,
+            "bidirectional_target": []
+        },
+        {
             "key": "field_68bb5115a8d35",
             "label": "Pronouns",
             "name": "pronouns",
@@ -60,8 +86,9 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_68bb3e8389468",
-                        "operator": "!=empty"
+                        "field": "field_68bb6028ef08a",
+                        "operator": "==",
+                        "value": "48"
                     }
                 ]
             ],
@@ -85,7 +112,15 @@
             "type": "email",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_68bb6028ef08a",
+                        "operator": "==",
+                        "value": "48"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -155,5 +190,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1757106496
+    "modified": 1757110425
 }

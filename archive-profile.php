@@ -107,6 +107,26 @@
             <div
               class="card bio-card bio-card-<?php echo $profile_index; ?> <?php //echo $profile_index === 1 ? 'selected' : ''; ?>"
               data-id="<?php echo esc_attr($level_slug); ?>-<?php echo $profile_index; ?>">
+              <?php if ($email || $strava) : ?>
+              <span class="badge text-bg-light">
+                <?php if ($email) : ?>
+                <a href="mailto:<?php echo esc_html($email); ?>">
+                  <svg class="icon email-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                    <path
+                      d="M112 128C85.5 128 64 149.5 64 176C64 191.1 71.1 205.3 83.2 214.4L291.2 370.4C308.3 383.2 331.7 383.2 348.8 370.4L556.8 214.4C568.9 205.3 576 191.1 576 176C576 149.5 554.5 128 528 128L112 128zM64 260L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 260L377.6 408.8C343.5 434.4 296.5 434.4 262.4 408.8L64 260z" />
+                  </svg>
+                </a>
+                <?php endif; ?>
+                <?php if ($strava) : ?>
+                <a href="<?php echo esc_url($strava); ?>" target="_blank">
+                  <svg class="icon strava-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                    <path
+                      d="M286.4 64L135 356L224.2 356L286.4 239.9L348.1 356L436.6 356L286.4 64zM436.6 356L392.7 444.2L348.1 356L280.5 356L392.7 576L504.2 356L436.6 356z" />
+                  </svg>
+                </a>
+                <?php endif; ?>
+              </span>
+              <?php endif; ?>
               <?php if ($profile_headshot) : ?>
               <img class="card-img-top" src="<?php echo esc_url($profile_headshot['sizes']['large']); ?>"
                 alt="<?php echo esc_attr($profile_headshot['alt'] ?: $profile_post->post_title); ?>">
@@ -117,22 +137,7 @@
                   <?php if ($pronouns) : ?>
                   <span class="text-muted"><small><?php echo esc_html($pronouns); ?></small></span>
                   <?php endif; ?>
-                  <?php if ($email) : ?>
-                  <a href="mailto:<?php echo esc_html($email); ?>">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-                      <path
-                        d="M112 128C85.5 128 64 149.5 64 176C64 191.1 71.1 205.3 83.2 214.4L291.2 370.4C308.3 383.2 331.7 383.2 348.8 370.4L556.8 214.4C568.9 205.3 576 191.1 576 176C576 149.5 554.5 128 528 128L112 128zM64 260L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 576 448L576 260L377.6 408.8C343.5 434.4 296.5 434.4 262.4 408.8L64 260z" />
-                    </svg>
-                  </a>
-                  <?php endif; ?>
-                  <?php if ($strava) : ?>
-                  <a href="<?php echo esc_url($strava); ?>" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
-                      <path
-                        d="M286.4 64L135 356L224.2 356L286.4 239.9L348.1 356L436.6 356L286.4 64zM436.6 356L392.7 444.2L348.1 356L280.5 356L392.7 576L504.2 356L436.6 356z" />
-                    </svg>
-                  </a>
-                  <?php endif; ?>
+
                 </h3>
                 <?php if ($board_position_title) : ?>
                 <p><?php echo esc_html($board_position_title); ?></p>

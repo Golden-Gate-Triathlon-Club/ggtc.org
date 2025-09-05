@@ -12516,8 +12516,17 @@ main a:not(.btn):not(.breadcrumb-link):not(.card):hover {
   fill: #dd2b2e;
 }
 
+.bio-card {
+  position: relative;
+}
 .bio-card:hover {
   cursor: pointer;
+}
+.bio-card .badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
 }
 .bio-card img {
   width: 100%;
@@ -12528,8 +12537,15 @@ main a:not(.btn):not(.breadcrumb-link):not(.card):hover {
   object-position: top;
 }
 .bio-card svg {
-  width: 40px;
   height: auto;
+}
+.bio-card .email-icon {
+  fill: #333;
+  width: 30px;
+}
+.bio-card .strava-icon {
+  fill: #fc5200;
+  width: 40px;
 }
 
 .board-bio-list {
@@ -12582,6 +12598,7 @@ main a:not(.btn):not(.breadcrumb-link):not(.card):hover {
 .bio-details .island {
   padding: 30px;
   border-radius: 10px;
+  border: 1px solid #dd2b2e;
 }
 
 @media (max-width: 991.98px) {
