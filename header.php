@@ -42,8 +42,8 @@
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Mission &amp; Values</a></li>
                 <li><a class="dropdown-item" href="#">Code of Conduct</a></li>
-                <li><a class="dropdown-item" href="#">Board Members</a></li>
-                <li><a class="dropdown-item" href="#">Ambassador Team</a></li>
+                <li><a class="dropdown-item" href="/profiles/#board-members">Board Members</a></li>
+                <li><a class="dropdown-item" href="/profiles/#ambassadors">Ambassador Team</a></li>
                 <li><a class="dropdown-item" href="/sponsors">Sponsors</a></li>
                 <li><a class="dropdown-item" href="#">Social</a></li>
                 <li><a class="dropdown-item" href="#">Triathlon Survival Checklist</a></li>
