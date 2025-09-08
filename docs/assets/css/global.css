@@ -12522,6 +12522,17 @@ main a:not(.btn):not(.breadcrumb-link):not(.card):hover {
 .bio-card:hover {
   cursor: pointer;
 }
+.bio-card a {
+  text-decoration: none !important;
+}
+.bio-card small, .bio-card .small {
+  display: block;
+  font-size: 16px;
+  margin-top: 5px;
+}
+.bio-card p:last-of-type {
+  margin-bottom: 0;
+}
 .bio-card .badge {
   position: absolute;
   top: 10px;
@@ -12541,11 +12552,11 @@ main a:not(.btn):not(.breadcrumb-link):not(.card):hover {
 }
 .bio-card .email-icon {
   fill: #333;
-  width: 30px;
+  width: 20px;
 }
 .bio-card .strava-icon {
   fill: #fc5200;
-  width: 40px;
+  width: 25px;
 }
 
 .board-bio-list {

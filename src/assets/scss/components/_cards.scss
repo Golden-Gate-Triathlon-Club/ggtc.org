@@ -4,6 +4,20 @@
 		cursor: pointer;
 	}
 
+	a {
+		text-decoration: none !important;
+	}
+
+	small {
+		display: block;
+		font-size: 16px;
+		margin-top: 5px;
+	}
+
+	p:last-of-type {
+		margin-bottom: 0;
+	}
+
 	.badge {
 		position: absolute;
 		top: 10px;
@@ -26,12 +40,12 @@
 
 	.email-icon {
 		fill: #333;
-		width: 30px;
+		width: 20px;
 	}
 
 	.strava-icon {
 		fill: #fc5200;
-		width: 40px;
+		width: 25px;
 	}
 }
 
