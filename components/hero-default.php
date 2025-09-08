@@ -1,5 +1,5 @@
-<section class="hero">
-  <img src="<?php echo get_template_directory_uri(); ?>/docs/assets/img/page-hero-run.webp" alt="">
+<section class="hero hero-default">
+  <img src="<?php echo get_template_directory_uri(); ?>/docs/assets/img/placeholder-hero.png" alt="Placeholder">
   <div class="caption">
     <div class="container">
       <div class="row">

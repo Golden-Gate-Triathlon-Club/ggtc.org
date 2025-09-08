@@ -1,7 +1,6 @@
 <?php get_header();?>
 <?php if (have_posts()) : while ( have_posts() ) : the_post();?>
 
-
 <?php
 $hero_found = false;
 if( have_rows('components') ):

@@ -7,20 +7,22 @@
 
 get_header();?>
 
-<section class="hero">
-  <img src="<?php echo get_template_directory_uri(); ?>/docs/assets/img/page-hero-run.webp" alt="">
-  <div class="caption">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <h1 class="entry-title">
-            <span><?php the_title(); ?></span>
-          </h1>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<?php
+$hero_found = false;
+if( have_rows('components') ):
+    while( have_rows('components') ): the_row();
+        if( get_row_layout() == 'hero' ):
+            $hero_found = true;
+            get_template_part('components/hero'); 
+        endif;
+    endwhile;
+endif;
+
+// If no hero component was found, show default hero
+if (!$hero_found) :
+    get_template_part('components/hero-default');
+endif;
+?>
 
 <?php get_template_part('components/breadcrumbs'); ?>
 
