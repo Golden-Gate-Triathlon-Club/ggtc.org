@@ -133,8 +133,25 @@ add_filter('tiny_mce_before_init', function ($mce_init) {
     // Ensure fonts are available in TinyMCE iframe
     $mce_init['font_formats'] = 'Barlow Condensed=Barlow Condensed, sans-serif; Roboto=Roboto, sans-serif; Arial=arial,helvetica,sans-serif; Times New Roman=times new roman,times,serif; Courier New=courier new,courier,monospace';
 
+    // Define custom formats
+    $mce_init['formats'] = json_encode([
+        'intro' => [
+            'selector' => 'p',
+            'block'    => 'p',
+            'classes'  => 'intro',
+        ],
+    ], JSON_THROW_ON_ERROR);
+
     // Customize block formats - remove H5, H6, and Preformatted
-    $mce_init['block_formats'] = 'Paragraph=p;Heading 1=h1;Heading 2=h2;Heading 3=h3;Heading 4=h4';
+    $block_formats = [
+        'Paragraph=p',
+        'Intro Paragraph=intro',
+        'Heading 1=h1',
+        'Heading 2=h2',
+        'Heading 3=h3',
+        'Heading 4=h4',
+    ];
+    $mce_init['block_formats'] = implode(';', $block_formats);
 
     // Add Google Fonts to TinyMCE iframe head and prevent empty paragraphs
     $mce_init['setup'] = 'function(ed) {
