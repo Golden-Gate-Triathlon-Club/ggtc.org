@@ -60,3 +60,8 @@ h4 {
   line-height: 1;
   font-weight: 600;
 }
+
+p.intro {
+  font-size: calc(1.265625rem + 0.1875vw);
+  font-weight: 300;
+}

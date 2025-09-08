@@ -25,11 +25,13 @@ get_header();?>
 <?php get_template_part('components/breadcrumbs'); ?>
 
 <main id="site-content" role="main">
+
+  <?php get_template_part('components/all-components'); ?>
+
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
 
-        <?php get_template_part('components/all-components'); ?>
 
         <?php if (have_posts()) : ?>
 

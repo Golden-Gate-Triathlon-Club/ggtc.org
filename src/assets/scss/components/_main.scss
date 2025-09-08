@@ -10,4 +10,15 @@ main {
 			color: darken($brand-blue, 10%);
 		}
 	}
+
+	section {
+		&.padding-y-100 {
+			&:first-child {
+				padding-top: 50px;
+			}
+			&:last-child {
+				padding-bottom: 50px;
+			}
+		}
+	}
 }

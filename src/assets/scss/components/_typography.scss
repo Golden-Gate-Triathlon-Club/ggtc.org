@@ -44,3 +44,7 @@ h4 {
 	line-height: 1;
 	font-weight: 600;
 }
+
+p.intro {
+	@extend .lead;
+}

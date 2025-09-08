@@ -1,17 +1,27 @@
 <?php get_header();?>
+<?php if (have_posts()) : while ( have_posts() ) : the_post();?>
 
+
+<?php
+$hero_found = false;
+if( have_rows('components') ):
+    while( have_rows('components') ): the_row();
+        if( get_row_layout() == 'hero' ):
+            $hero_found = true;
+            get_template_part('components/hero'); 
+        endif;
+    endwhile;
+endif;
+
+// If no hero component was found, show default hero
+if (!$hero_found) :
+    get_template_part('components/hero-default');
+endif;
+?>
+<?php get_template_part('components/breadcrumbs'); ?>
 <main id="site-content" role="main">
-  <?php if (have_posts()) : while ( have_posts() ) : the_post();?>
-  <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <header class="entry-header">
-      <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-    </header>
-    <div class="entry-content">
-      <?php the_content(); ?>
-    </div>
-  </article>
-  <?php endwhile; ?>
-  <?php endif;?>
+  <?php get_template_part('components/all-components'); ?>
 </main>
-
+<?php endwhile; ?>
+<?php endif;?>
 <?php get_footer();?>
