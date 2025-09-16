@@ -1,14 +1,14 @@
 .hero {
 	position: relative;
 	img {
-		height: 400px;
+		height: 500px;
 		width: 100%;
 		object-fit: cover;
 		background-position: center;
 
-		@include media-breakpoint-down(lg) {
-			height: 250px;
-		}
+		// @include media-breakpoint-down(lg) {
+		// 	height: 250px;
+		// }
 	}
 
 	.caption {
@@ -21,6 +21,11 @@
 		z-index: 2;
 		padding: 15px 0;
 		font-size: 20px;
+
+		&.no-image {
+			background-color: $brand-red;
+			position: relative;
+		}
 
 		h1 {
 			margin-bottom: 0;

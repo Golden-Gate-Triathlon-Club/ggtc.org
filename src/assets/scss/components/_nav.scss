@@ -1,6 +1,12 @@
 .navbar {
 	// show dropdown menu on hover vs click
 
+	.nav-link.dropdown-toggle:focus,
+	.nav-link.dropdown-toggle:focus-visible {
+		outline: none !important;
+		box-shadow: none !important;
+	}
+
 	a:not(.btn) {
 		color: $brand-white;
 		transition: color 0.3s ease-in-out;

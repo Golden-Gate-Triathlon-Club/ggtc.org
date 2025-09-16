@@ -11963,15 +11963,10 @@ header a:hover {
   position: relative;
 }
 .hero img {
-  height: 400px;
+  height: 500px;
   width: 100%;
   object-fit: cover;
   background-position: center;
-}
-@media (max-width: 991.98px) {
-  .hero img {
-    height: 250px;
-  }
 }
 .hero .caption {
   position: absolute;
@@ -11984,10 +11979,19 @@ header a:hover {
   padding: 15px 0;
   font-size: 20px;
 }
+.hero .caption.no-image {
+  background-color: #dd2b2e;
+  position: relative;
+}
 .hero .caption h1, .hero .caption .h1 {
   margin-bottom: 0;
 }
 
+.navbar .nav-link.dropdown-toggle:focus,
+.navbar .nav-link.dropdown-toggle:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
 .navbar a:not(.btn) {
   color: #fff;
   transition: color 0.3s ease-in-out;

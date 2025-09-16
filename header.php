@@ -89,7 +89,7 @@
                     <li class=" ">
                       <a class="dropdown-item"
                         href="https://felixr.notion.site/Swim-Sets-0afb3bfeaf74436ab00f43d1ceb182d3" target="_blank"
-                        title="Set Library"><span>Set Library</span></a>
+                        title="Set Library"><span>Set Library <span>&neArr;</span></span></a>
                     </li>
 
                     <li class=" ">
@@ -102,27 +102,32 @@
                 </li>
 
                 <li class=" dir">
-                  <a class="dropdown-item" href="#" title="Bike"><span>Bike</span></a>
+                  <a class="dropdown-item" href="<?php echo get_permalink(410); ?>" title="Bike"><span>Bike</span></a>
                   <ul class="secondLevel">
                     <li class=" ">
-                      <a class="dropdown-item" href="#" title="Ride Rating System"><span>Ride Rating
+                      <a class="dropdown-item" href="<?php echo get_permalink(413); ?>"
+                        title="Ride Rating System"><span>Ride Rating
                           System</span></a>
                     </li>
 
                     <li class=" ">
-                      <a class="dropdown-item" href="#" title="Route Repo"><span>Route Repo</span></a>
+                      <a class="dropdown-item" href="<?php echo get_permalink(422); ?>" title="Route Repo"><span>Popular
+                          Cycling Routes</span></a>
                     </li>
 
                     <li class=" ">
-                      <a class="dropdown-item" href="#" title="Getting a Bike"><span>Getting a Bike</span></a>
+                      <a class="dropdown-item" href="<?php echo get_permalink(425); ?>"
+                        title="Getting a Bike"><span>Getting a Bike</span></a>
                     </li>
 
                     <li class=" ">
-                      <a class="dropdown-item" href="#" title="Gearing Up"><span>Gearing Up</span></a>
+                      <a class="dropdown-item" href="<?php echo get_permalink(430); ?>" title="Gearing Up"><span>Gearing
+                          Up</span></a>
                     </li>
 
                     <li class=" ">
-                      <a class="dropdown-item" href="#" title="Using GPS Routes"><span>Using GPS Routes</span></a>
+                      <a class="dropdown-item" href="<?php echo get_permalink(428); ?>"
+                        title="Using GPS Routes"><span>Using GPS Routes</span></a>
                     </li>
 
                   </ul>
@@ -156,37 +161,38 @@
               <a class="nav-link" href="">Community</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Training Programs</a>
+              <a class="nav-link dropdown-toggle" href="<?php echo get_permalink(444); ?>"
+                data-bs-toggle="dropdown">Training Programs</a>
               <ul class="dropdown-menu">
                 <li class="dropend">
-                  <a class="dropdown-item " href="#">
+                  <a class="dropdown-item " href="<?php echo get_permalink(442); ?>">
                     Short Distance Program
                   </a>
-                  <ul class="secondLevel">
+                  <!-- <ul class="secondLevel">
                     <li><a class="dropdown-item" href="#">Sprint Training</a></li>
                     <li><a class="dropdown-item" href="#">Olympic Training</a></li>
                     <li><a class="dropdown-item" href="#">Beginner Friendly</a></li>
-                  </ul>
+                  </ul> -->
                 </li>
                 <li class="dropend">
-                  <a class="dropdown-item " href="#">
+                  <a class="dropdown-item " href="<?php echo get_permalink(447); ?>">
                     Women Tri Together
                   </a>
-                  <ul class="secondLevel">
+                  <!-- <ul class="secondLevel">
                     <li><a class="dropdown-item" href="#">Program Overview</a></li>
                     <li><a class="dropdown-item" href="#">Schedule</a></li>
                     <li><a class="dropdown-item" href="#">Registration</a></li>
-                  </ul>
+                  </ul> -->
                 </li>
                 <li class="dropend">
                   <a class="dropdown-item " href="#">
                     Long Distance Program
                   </a>
-                  <ul class="secondLevel">
+                  <!-- <ul class="secondLevel">
                     <li><a class="dropdown-item" href="#">Half Ironman</a></li>
                     <li><a class="dropdown-item" href="#">Full Ironman</a></li>
                     <li><a class="dropdown-item" href="#">Ultra Distance</a></li>
-                  </ul>
+                  </ul> -->
                 </li>
                 <li><a class="dropdown-item" href="#">Century Program</a></li>
                 <li><a class="dropdown-item" href="#">Marathon Training Program</a></li>

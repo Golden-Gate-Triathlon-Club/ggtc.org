@@ -14,7 +14,7 @@ endif;
 
 // If no hero component was found, show default hero
 if (!$hero_found) :
-    get_template_part('components/hero-default');
+    get_template_part('components/hero-no-img');
 endif;
 ?>
 <?php get_template_part('components/breadcrumbs'); ?>
