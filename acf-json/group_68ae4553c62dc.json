@@ -363,6 +363,27 @@
                             "esc_html": 0
                         },
                         {
+                            "key": "field_68d5659744acf",
+                            "label": "Text Section Headline",
+                            "name": "text_section_headline",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "Optional headline that will span the two columns",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
                             "key": "field_68bf14ff876e0",
                             "label": "Section Background Color",
                             "name": "section_background_color",
@@ -595,5 +616,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1757354448
+    "modified": 1758815678
 }

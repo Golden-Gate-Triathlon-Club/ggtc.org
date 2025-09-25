@@ -11,7 +11,7 @@ $cta_banner_button_color = get_sub_field("cta_button_color");
 <section id="cta-banner-<?php echo get_row_index(); ?>"
   class="section-<?php echo get_row_index(); ?> cta-banner <?php echo $section_background_color; ?> padding-y-100">
   <div class="container">
-    <div class="row">
+    <div class="row align-items-center">
       <div class="col-lg-9">
         <h2><?php the_sub_field("cta_banner_headline"); ?></h2>
         <?php if (get_sub_field("cta_banner_text")) : ?>

@@ -12084,8 +12084,12 @@ main a:not(.btn):not(.breadcrumb-link):not(.card):hover {
 main section.padding-y-100:first-child {
   padding-top: 50px;
 }
-main section.padding-y-100:last-child {
+main section.padding-y-100:last-child:not(.cta-banner) {
   padding-bottom: 50px;
+}
+main .text-column:not(:last-child) {
+  padding-bottom: 50px;
+  padding-top: 50px;
 }
 
 .breadcrumb-inner {
@@ -12949,4 +12953,90 @@ main section.padding-y-100:last-child {
 .sponsor-logo img {
   width: 400px;
   height: auto;
+}
+
+/*! purgecss start ignore */
+body.admin-bar .navbar.fixed-top {
+  top: 32px !important;
+}
+
+@media (max-width: 575.98px) {
+  body.admin-bar .navbar.fixed-top {
+    top: 46px !important;
+  }
+}
+/* Alignments
+--------------------------------------------- */
+.alignleft {
+  /*rtl:ignore*/
+  float: left;
+  /*rtl:ignore*/
+  margin-right: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.alignright {
+  /*rtl:ignore*/
+  float: right;
+  /*rtl:ignore*/
+  margin-left: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5em;
+}
+
+.mce-content-body {
+  padding: 20px;
+}
+.mce-content-body a:not(.btn) {
+  color: var(--c-green-dark);
+  text-decoration: underline;
+  transition: color 0.2s ease-in-out;
+}
+.mce-content-body a:not(.btn):hover {
+  color: var(--c-green-dark);
+}
+
+@media (max-width: 1024px) {
+  .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column {
+    flex-basis: 100% !important;
+  }
+  body .is-layout-flex {
+    flex-direction: column;
+  }
+}
+.wp-block-embed iframe {
+  width: 100% !important;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
+/*! purgecss end ignore */
+body.admin-bar .navbar.fixed-top {
+  top: 32px !important;
+}
+
+@media (max-width: 575.98px) {
+  body.admin-bar .navbar.fixed-top {
+    top: 46px !important;
+  }
+}
+body .site-content {
+  padding-top: 56px;
+}
+
+body.admin-bar .site-content {
+  padding-top: 88px;
+}
+
+@media (max-width: 575.98px) {
+  body.admin-bar .site-content {
+    padding-top: 102px;
+  }
 }

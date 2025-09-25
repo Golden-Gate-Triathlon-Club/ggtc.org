@@ -1,0 +1,97 @@
+/*! purgecss start ignore */
+
+// Pushes page content down by 32px when admin bar is present (user logged in)
+body.admin-bar .navbar.fixed-top {
+	top: 32px !important;
+}
+
+@include media-breakpoint-down(sm) {
+	body.admin-bar .navbar.fixed-top {
+		top: 46px !important;
+	}
+}
+
+/* Alignments
+--------------------------------------------- */
+.alignleft {
+	/*rtl:ignore*/
+	float: left;
+
+	/*rtl:ignore*/
+	margin-right: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+.alignright {
+	/*rtl:ignore*/
+	float: right;
+
+	/*rtl:ignore*/
+	margin-left: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1.5em;
+}
+
+.mce-content-body {
+	padding: 20px;
+	a:not(.btn) {
+		color: var(--c-green-dark);
+		text-decoration: underline;
+		transition: color 0.2s ease-in-out;
+
+		&:hover {
+			color: var(--c-green-dark);
+		}
+	}
+}
+
+// Override gutenberg column width
+@media (max-width: 1024px) {
+	.wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column {
+		flex-basis: 100% !important;
+	}
+
+	body .is-layout-flex {
+		flex-direction: column;
+	}
+}
+
+.wp-block-embed {
+	iframe {
+		width: 100% !important	;
+		height: auto;
+		aspect-ratio: 16/9;
+	}
+}
+/*! purgecss end ignore */
+
+body.admin-bar .navbar.fixed-top {
+	top: 32px !important;
+}
+
+@include media-breakpoint-down(sm) {
+	body.admin-bar .navbar.fixed-top {
+		top: 46px !important;
+	}
+}
+
+body .site-content {
+	padding-top: 56px; // or your navbar height
+}
+
+body.admin-bar .site-content {
+	padding-top: calc(56px + 32px); // navbar + admin bar
+}
+
+@include media-breakpoint-down(sm) {
+	body.admin-bar .site-content {
+		padding-top: calc(56px + 46px);
+	}
+}

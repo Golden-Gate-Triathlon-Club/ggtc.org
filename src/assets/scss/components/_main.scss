@@ -1,5 +1,4 @@
 main {
-	// padding: 40px 0;
 	a:not(.btn):not(.breadcrumb-link):not(.card) {
 		color: $brand-blue;
 		text-decoration: underline;
@@ -16,9 +15,17 @@ main {
 			&:first-child {
 				padding-top: 50px;
 			}
-			&:last-child {
+			&:last-child:not(.cta-banner) {
 				padding-bottom: 50px;
 			}
+		}
+	}
+
+	// target .text-column and adjust padding. Reduce padding to 50px if a .text-column is followed by a .text-column
+	.text-column {
+		&:not(:last-child) {
+			padding-bottom: 50px;
+			padding-top: 50px;
 		}
 	}
 }
