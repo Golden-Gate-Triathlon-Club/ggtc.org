@@ -194,9 +194,9 @@
                     <li><a class="dropdown-item" href="#">Ultra Distance</a></li>
                   </ul> -->
                 </li>
-                <li><a class="dropdown-item" href="#">Century Program</a></li>
-                <li><a class="dropdown-item" href="#">Marathon Training Program</a></li>
-                <li><a class="dropdown-item" href="#">Trail Running Program</a></li>
+                <li><a class="dropdown-item" href="<?php echo get_permalink(468); ?>">Century Program</a></li>
+                <li><a class="dropdown-item" href="<?php echo get_permalink(471); ?>">Marathon Training Program</a></li>
+                <li><a class="dropdown-item" href="<?php echo get_permalink(484); ?>">Trail Running Program</a></li>
                 <li><a class="dropdown-item" href="#">1:1 Coaching</a></li>
               </ul>
             </li>
