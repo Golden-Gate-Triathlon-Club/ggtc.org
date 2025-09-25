@@ -9,6 +9,7 @@ if( have_rows('components') ):
             $hero_found = true;
             get_template_part('components/hero'); 
         endif;
+        
     endwhile;
 endif;
 

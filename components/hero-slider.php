@@ -63,5 +63,9 @@ const swiper = new Swiper('.swiper-hero-slider', {
     el: ".swiper-pagination",
     clickable: true,
   },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+  },
 });
 </script>

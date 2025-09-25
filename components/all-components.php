@@ -1,7 +1,9 @@
 <?php
 if( have_rows('components') ):
     while( have_rows('components') ): the_row();
-        if( get_row_layout() == 'cta-banner' ):
+        if( get_row_layout() == 'slider' ):
+            get_template_part('components/slider'); 
+        elseif( get_row_layout() == 'cta-banner' ):
             get_template_part('components/section-cta-banner');
         elseif( get_row_layout() == 'text-section-1-column' ):
             get_template_part('components/section-text-1-column');

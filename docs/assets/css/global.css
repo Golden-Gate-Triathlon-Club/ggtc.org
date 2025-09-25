@@ -12465,6 +12465,8 @@ main .text-column:not(:last-child) {
 }
 .swiper-community-slider .swiper-pagination,
 .swiper-default-slider .swiper-pagination {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 5px;
   position: relative;
   margin-top: 10px;
   text-align: center;
@@ -12497,6 +12499,14 @@ main .text-column:not(:last-child) {
 .swiper-wrapper {
   height: auto !important;
   padding-bottom: 20px;
+}
+
+.swiper-pagination {
+  background-color: rgba(255, 255, 255, 0.7);
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: auto !important;
+  border-radius: 5px;
 }
 
 .d-grid {

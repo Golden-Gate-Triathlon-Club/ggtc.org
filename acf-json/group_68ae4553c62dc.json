@@ -17,6 +17,42 @@
                 "id": ""
             },
             "layouts": {
+                "layout_68b8cbf693be1": {
+                    "key": "layout_68b8cbf693be1",
+                    "name": "hero",
+                    "label": "Hero",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_68b8cc1093be6",
+                            "label": "Hero Image",
+                            "name": "hero_image",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "allow_in_bindings": 0,
+                            "preview_size": "medium"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_68ae45600f9b7": {
                     "key": "layout_68ae45600f9b7",
                     "name": "hero-slider",
@@ -117,19 +153,19 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_68b8cbf693be1": {
-                    "key": "layout_68b8cbf693be1",
-                    "name": "hero",
-                    "label": "Hero",
+                "layout_68d5769281a19": {
+                    "key": "layout_68d5769281a19",
+                    "name": "slider",
+                    "label": "Slider",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_68b8cc1093be6",
-                            "label": "Hero Image",
-                            "name": "hero_image",
+                            "key": "field_68d5769281a1a",
+                            "label": "Slider",
+                            "name": "slider",
                             "aria-label": "",
-                            "type": "image",
-                            "instructions": "",
+                            "type": "repeater",
+                            "instructions": "Slider for use in page (not hero at the top of the page)",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -137,17 +173,81 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "array",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": "",
-                            "allow_in_bindings": 0,
-                            "preview_size": "medium"
+                            "layout": "row",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "",
+                            "button_label": "Add Slide",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_68d5769281a1b",
+                                    "label": "Slider Image",
+                                    "name": "slider_image",
+                                    "aria-label": "",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": "",
+                                    "allow_in_bindings": 0,
+                                    "preview_size": "medium",
+                                    "parent_repeater": "field_68d5769281a1a"
+                                },
+                                {
+                                    "key": "field_68d5769281a1c",
+                                    "label": "Slider Text (optional)",
+                                    "name": "slider_text",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Descriptive text shown at the bottom of the slide",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_68d5769281a1a"
+                                },
+                                {
+                                    "key": "field_68d5769281a1d",
+                                    "label": "Slide Link (Optional)",
+                                    "name": "slide_link",
+                                    "aria-label": "",
+                                    "type": "link",
+                                    "instructions": "Link this slide to a page",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "allow_in_bindings": 0,
+                                    "parent_repeater": "field_68d5769281a1a"
+                                }
+                            ]
                         }
                     ],
                     "min": "",
@@ -616,5 +716,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1758815678
+    "modified": 1758820034
 }
