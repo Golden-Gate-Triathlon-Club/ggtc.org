@@ -1,0 +1,573 @@
+<html>
+<head>
+	<title>Golden Gate Triathlon Club</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="assets/css/global.css" />
+	<link href="light-mode-favicon.png" rel="icon" media="(prefers-color-scheme: light)">
+	<link href="dark-mode-favicon.png" rel="icon" media="(prefers-color-scheme: dark)">
+	<link href="light-mode-favicon.png" rel="icon" media="(prefers-color-scheme: no-preference)">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+  <header>
+	<nav class="navbar navbar-expand-xl">
+		<div class="container">
+			<a class="navbar-brand" href="#">
+				<img src="assets/img/ggtc-logo.svg" alt="Golden Gate Triathlon Club">
+			</a>
+			<!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button> -->
+
+
+			<!-- TODO - mega menu? -->
+
+			<label for="toggle" class="navbar-toggler-label">☰</label>
+			<input id="toggle" type="checkbox" class="navbar-toggler visually-hidden" />
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mb-2 mb-lg-0">
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">About</a>
+						<ul class="dropdown-menu">
+							<li><a class="dropdown-item" href="#">Mission &amp; Values</a></li>
+							<li><a class="dropdown-item" href="#">Code of Conduct</a></li>
+							<li><a class="dropdown-item" href="#">Board Members</a></li>
+							<li><a class="dropdown-item" href="#">Ambassador Team</a></li>
+							<li><a class="dropdown-item" href="#">Sponsors</a></li>
+							<li><a class="dropdown-item" href="#">Social</a></li>
+							<li><a class="dropdown-item" href="#">Triathlon Survival Checklist</a></li>
+							<li><a class="dropdown-item" href="#">Donate</a></li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="">Calendar</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Sports</a>
+						<ul class="dropdown-menu">
+							<li class=" dir">
+								<div class="item">
+									<a class="dropdown-item" href="#" title="Swim"><span>Swim</span></a>
+									<ul class="secondLevel">
+										<li class=" ">
+											<div class="item">
+												<a class="dropdown-item" href="#" title="Swimming in Aquatic Park"><span>Swimming in Aquatic
+														Park</span></a>
+											</div>
+										</li>
+
+										<li class=" ">
+											<div class="item">
+												<a class="dropdown-item" href="#" title="Public Pool Schedule"><span>Public Pool
+														Schedule</span></a>
+											</div>
+										</li>
+
+										<li class=" ">
+											<div class="item">
+												<a class="dropdown-item" href="#" title="Becoming a Better Swimmer"><span>Becoming a Better
+														Swimmer</span></a>
+											</div>
+										</li>
+
+										<li class=" ">
+											<div class="item">
+												<a class="dropdown-item" href="#" title="Coached Swimming 101"><span>Coached Swimming
+														101</span></a>
+											</div>
+										</li>
+
+										<li class=" ">
+											<div class="item">
+												<a class="dropdown-item" href="#" title="Set Library"><span>Set Library</span></a>
+											</div>
+										</li>
+
+										<li class=" ">
+											<div class="item">
+												<a class="dropdown-item" href="#"
+													title="Registration Requirements for Thursday Swims"><span>Registration Requirements for
+														Thursday Swims</span></a>
+											</div>
+										</li>
+
+									</ul>
+								</div>
+							</li>
+
+							<li class=" dir">
+								<div class="item">
+									<a class="dropdown-item" href="#" title="Bike"><span>Bike</span></a>
+									<ul class="secondLevel">
+										<li class=" ">
+											<div class="item">
+												<a class="dropdown-item" href="#" title="Ride Rating System"><span>Ride Rating System</span></a>
+											</div>
+										</li>
+
+										<li class=" ">
+											<div class="item">
+												<a class="dropdown-item" href="#" title="Route Repo"><span>Route Repo</span></a>
+											</div>
+										</li>
+
+										<li class=" ">
+											<div class="item">
+												<a class="dropdown-item" href="#" title="Getting a Bike"><span>Getting a Bike</span></a>
+											</div>
+										</li>
+
+										<li class=" ">
+											<div class="item">
+												<a class="dropdown-item" href="#" title="Gearing Up"><span>Gearing Up</span></a>
+											</div>
+										</li>
+
+										<li class=" ">
+											<div class="item">
+												<a class="dropdown-item" href="#" title="Using GPS Routes"><span>Using GPS Routes</span></a>
+											</div>
+										</li>
+
+									</ul>
+								</div>
+							</li>
+
+							<li class=" dir">
+								<div class="item">
+									<a class="dropdown-item" href="#" title="Run"><span>Run</span></a>
+									<ul class="secondLevel">
+										<li class=" ">
+											<div class="item">
+												<a class="dropdown-item" href="#" title="Popular Routes"><span>Popular Routes</span></a>
+											</div>
+										</li>
+
+										<li class=" ">
+											<div class="item">
+												<a class="dropdown-item" href="#" title="Track Etiquette"><span>Track Etiquette</span></a>
+											</div>
+										</li>
+
+										<li class=" ">
+											<div class="item">
+												<a class="dropdown-item" href="#" title="Trail Running 101"><span>Trail Running 101</span></a>
+											</div>
+										</li>
+
+									</ul>
+								</div>
+							</li>
+
+							<li class=" ">
+								<div class="item">
+									<a class="dropdown-item" href="#" title="Strength Training"><span>Strength Training</span></a>
+								</div>
+							</li>
+
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="">Community</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Training Programs</a>
+						<ul class="dropdown-menu">
+							<li class="dropend">
+								<a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+									Short Distance Program
+								</a>
+								<ul class="">
+									<li><a class="dropdown-item" href="#">Sprint Training</a></li>
+									<li><a class="dropdown-item" href="#">Olympic Training</a></li>
+									<li><a class="dropdown-item" href="#">Beginner Friendly</a></li>
+								</ul>
+							</li>
+							<li class="dropend">
+								<a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+									Women Tri Together
+								</a>
+								<ul class="">
+									<li><a class="dropdown-item" href="#">Program Overview</a></li>
+									<li><a class="dropdown-item" href="#">Schedule</a></li>
+									<li><a class="dropdown-item" href="#">Registration</a></li>
+								</ul>
+							</li>
+							<li class="dropend">
+								<a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+									Long Distance Program
+								</a>
+								<ul class="">
+									<li><a class="dropdown-item" href="#">Half Ironman</a></li>
+									<li><a class="dropdown-item" href="#">Full Ironman</a></li>
+									<li><a class="dropdown-item" href="#">Ultra Distance</a></li>
+								</ul>
+							</li>
+							<li><a class="dropdown-item" href="#">Century Program</a></li>
+							<li><a class="dropdown-item" href="#">Marathon Training Program</a></li>
+							<li><a class="dropdown-item" href="#">Trail Running Program</a></li>
+							<li><a class="dropdown-item" href="#">1:1 Coaching</a></li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="">Why Join</a>
+					</li>
+				</ul>
+
+				<div class="ms-auto ">
+					<a href="#" class="btn btn-primary">Join Now</a>
+					<a href="#" class="btn btn-outline-primary">Login</a>
+
+				</div>
+
+
+			</div>
+		</div>
+	</nav>
+</header>
+
+
+  <main>
+    <section id="intro" class="intro padding-y-100">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h1 class="display-1">GGTC <span class="highlight">Sitemap</span></h1>
+
+
+            <ul>
+              <li><a href="https://ggtc.org/">https://ggtc.org/</a></li>
+              <li><a href="https://ggtc.org/membership">https://ggtc.org/membership</a></li>
+              <li><a href="https://ggtc.org/about">https://ggtc.org/about</a></li>
+              <li><a href="https://ggtc.org/mission-and-values">https://ggtc.org/mission-and-values</a></li>
+              <li><a href="https://ggtc.org/Code-of-Conduct">https://ggtc.org/Code-of-Conduct</a></li>
+              <li><a href="https://ggtc.org/board">https://ggtc.org/board</a></li>
+              <li><a href="https://ggtc.org/ambassadors">https://ggtc.org/ambassadors</a></li>
+              <li><a href="https://ggtc.org/sponsors">https://ggtc.org/sponsors</a></li>
+              <li><a href="https://ggtc.org/social">https://ggtc.org/social</a></li>
+              <li><a href="https://ggtc.org/triathlon-race-prep">https://ggtc.org/triathlon-race-prep</a></li>
+              <li><a
+                  href="https://ggtc.org/triathlon-survival-checklist">https://ggtc.org/triathlon-survival-checklist</a>
+              </li>
+              <li><a href="https://ggtc.org/donate">https://ggtc.org/donate</a></li>
+              <li><a href="https://ggtc.org/calendar">https://ggtc.org/calendar</a></li>
+              <li><a href="https://ggtc.org/upcoming-races">https://ggtc.org/upcoming-races</a></li>
+              <li><a href="https://ggtc.org/workout">https://ggtc.org/workout</a></li>
+              <li><a href="https://ggtc.org/swim">https://ggtc.org/swim</a></li>
+              <li><a href="https://ggtc.org/swimming-in-aquatic-park">https://ggtc.org/swimming-in-aquatic-park</a></li>
+              <li><a href="https://ggtc.org/pools">https://ggtc.org/pools</a></li>
+              <li><a href="https://ggtc.org/better-swimmer">https://ggtc.org/better-swimmer</a></li>
+              <li><a href="https://ggtc.org/swim101">https://ggtc.org/swim101</a></li>
+              <li><a href="https://ggtc.org/swim-sets">https://ggtc.org/swim-sets</a></li>
+              <li><a href="https://ggtc.org/thursday-swim-registration">https://ggtc.org/thursday-swim-registration</a>
+              </li>
+              <li><a href="https://ggtc.org/bike">https://ggtc.org/bike</a></li>
+              <li><a href="https://ggtc.org/Ride-Rating-System">https://ggtc.org/Ride-Rating-System</a></li>
+              <li><a href="https://ggtc.org/Route-Repo">https://ggtc.org/Route-Repo</a></li>
+              <li><a href="https://ggtc.org/getting-a-bike">https://ggtc.org/getting-a-bike</a></li>
+              <li><a href="https://ggtc.org/Gearing-Up">https://ggtc.org/Gearing-Up</a></li>
+              <li><a href="https://ggtc.org/gps-routes">https://ggtc.org/gps-routes</a></li>
+              <li><a href="https://ggtc.org/run">https://ggtc.org/run</a></li>
+              <li><a href="https://ggtc.org/Popular-Routes">https://ggtc.org/Popular-Routes</a></li>
+              <li><a href="https://ggtc.org/Track-Etiquette">https://ggtc.org/Track-Etiquette</a></li>
+              <li><a href="https://ggtc.org/Trail-Running-101">https://ggtc.org/Trail-Running-101</a></li>
+              <li><a href="https://ggtc.org/strength">https://ggtc.org/strength</a></li>
+              <li><a href="https://ggtc.org/trainingprograms">https://ggtc.org/trainingprograms</a></li>
+              <li><a href="https://ggtc.org/sdp">https://ggtc.org/sdp</a></li>
+              <li><a href="https://ggtc.org/wtt">https://ggtc.org/wtt</a></li>
+              <li><a href="https://ggtc.org/longdistance">https://ggtc.org/longdistance</a></li>
+              <li><a href="https://ggtc.org/century-program">https://ggtc.org/century-program</a></li>
+              <li><a href="https://ggtc.org/marathon-training-program">https://ggtc.org/marathon-training-program</a>
+              </li>
+              <li><a href="https://ggtc.org/trail-running-program">https://ggtc.org/trail-running-program</a></li>
+              <li><a href="https://ggtc.org/ironmancoaching">https://ggtc.org/ironmancoaching</a></li>
+              <li><a href="https://ggtc.org/contact">https://ggtc.org/contact</a></li>
+              <li><a href="https://ggtc.org/join">https://ggtc.org/join</a></li>
+              <li><a href="https://ggtc.org/Sys/ResetPasswordRequest">https://ggtc.org/Sys/ResetPasswordRequest</a></li>
+              <li><a href="https://ggtc.org/event-6492736">https://ggtc.org/event-6492736</a></li>
+              <li><a href="https://ggtc.org/event-6492698">https://ggtc.org/event-6492698</a></li>
+              <li><a href="https://ggtc.org/event-6517031">https://ggtc.org/event-6517031</a></li>
+              <li><a href="https://ggtc.org/event-6496560">https://ggtc.org/event-6496560</a></li>
+              <li><a href="https://ggtc.org/event-6503991">https://ggtc.org/event-6503991</a></li>
+              <li><a href="https://ggtc.org/event-6503361">https://ggtc.org/event-6503361</a></li>
+              <li><a href="https://ggtc.org/event-6503366">https://ggtc.org/event-6503366</a></li>
+              <li><a href="https://ggtc.org/About">https://ggtc.org/About</a></li>
+              <li><a href="https://ggtc.org/trailrunning">https://ggtc.org/trailrunning</a></li>
+              <li><a
+                  href="https://ggtc.org/Sys/Login?ReturnUrl=%2fsponsorship-discounts">https://ggtc.org/Sys/Login?ReturnUrl=%2fsponsorship-discounts</a>
+              </li>
+              <li><a href="https://ggtc.org/event-6501809">https://ggtc.org/event-6501809</a></li>
+              <li><a href="https://ggtc.org/event-6470010">https://ggtc.org/event-6470010</a></li>
+              <li><a
+                  href="https://ggtc.org/Sys/Login?ReturnUrl=%2fsponsorship-discounts%2f">https://ggtc.org/Sys/Login?ReturnUrl=%2fsponsorship-discounts%2f</a>
+              </li>
+              <li><a href="https://ggtc.org/event-6459465">https://ggtc.org/event-6459465</a></li>
+              <li><a href="https://ggtc.org/event-6459799">https://ggtc.org/event-6459799</a></li>
+              <li><a href="https://ggtc.org/event-6510461">https://ggtc.org/event-6510461</a></li>
+              <li><a href="https://ggtc.org/event-6510548">https://ggtc.org/event-6510548</a></li>
+              <li><a href="https://ggtc.org/event-6510514">https://ggtc.org/event-6510514</a></li>
+              <li><a href="https://ggtc.org/event-6510544">https://ggtc.org/event-6510544</a></li>
+              <li><a href="https://ggtc.org/event-6510189">https://ggtc.org/event-6510189</a></li>
+              <li><a href="https://ggtc.org/event-6510519">https://ggtc.org/event-6510519</a></li>
+              <li><a href="https://ggtc.org/event-6508350">https://ggtc.org/event-6508350</a></li>
+              <li><a href="https://ggtc.org/event-6510610">https://ggtc.org/event-6510610</a></li>
+              <li><a href="https://ggtc.org/event-6510196">https://ggtc.org/event-6510196</a></li>
+              <li><a href="https://ggtc.org/event-6510557">https://ggtc.org/event-6510557</a></li>
+              <li><a href="https://ggtc.org/event-6510507">https://ggtc.org/event-6510507</a></li>
+              <li><a href="https://ggtc.org/event-6510212">https://ggtc.org/event-6510212</a></li>
+              <li><a href="https://ggtc.org/event-6510450">https://ggtc.org/event-6510450</a></li>
+              <li><a href="https://ggtc.org/event-6510203">https://ggtc.org/event-6510203</a></li>
+              <li><a href="https://ggtc.org/event-6510555">https://ggtc.org/event-6510555</a></li>
+              <li><a href="https://ggtc.org/event-6510470">https://ggtc.org/event-6510470</a></li>
+              <li><a href="https://ggtc.org/event-6510600">https://ggtc.org/event-6510600</a></li>
+              <li><a href="https://ggtc.org/event-6492737">https://ggtc.org/event-6492737</a></li>
+              <li><a href="https://ggtc.org/event-6523086">https://ggtc.org/event-6523086</a></li>
+              <li><a href="https://ggtc.org/event-6522702">https://ggtc.org/event-6522702</a></li>
+              <li><a href="https://ggtc.org/Trail-Running-Program">https://ggtc.org/Trail-Running-Program</a></li>
+              <li><a
+                  href="https://ggtc.org/resources/Documents/Workshop%20Exercises.pdf">https://ggtc.org/resources/Documents/Workshop%20Exercises.pdf</a>
+              </li>
+              <li><a
+                  href="https://ggtc.org/resources/Documents/Warm%20Up.pdf">https://ggtc.org/resources/Documents/Warm%20Up.pdf</a>
+              </li>
+              <li><a
+                  href="https://ggtc.org/resources/Documents/Running%20Injury%20Prevention%20Trunk%20and%20Core.pdf">https://ggtc.org/resources/Documents/Running%20Injury%20Prevention%20Trunk%20and%20Core.pdf</a>
+              </li>
+              <li><a
+                  href="https://ggtc.org/resources/Documents/Foot%20Knee%20Hip%20Run%20Injury%20Prevention.pdf">https://ggtc.org/resources/Documents/Foot%20Knee%20Hip%20Run%20Injury%20Prevention.pdf</a>
+              </li>
+              <li><a
+                  href="https://ggtc.org/resources/Documents/Core%20Trunk%20Dynamic%20Strength%20Run%20Injury%20Prevention%20Workshop.pdf">https://ggtc.org/resources/Documents/Core%20Trunk%20Dynamic%20Strength%20Run%20Injury%20Prevention%20Workshop.pdf</a>
+              </li>
+              <li><a
+                  href="https://ggtc.org/resources/Documents/Core%20Stability.pdf">https://ggtc.org/resources/Documents/Core%20Stability.pdf</a>
+              </li>
+              <li><a
+                  href="https://ggtc.org/resources/Documents/3D%20Hip%20Stability.pdf">https://ggtc.org/resources/Documents/3D%20Hip%20Stability.pdf</a>
+              </li>
+              <li><a href="https://ggtc.org/event-3202735">https://ggtc.org/event-3202735</a></li>
+              <li><a
+                  href="https://ggtc.org/Sys/Login?ReturnUrl=%2fevent-6515709">https://ggtc.org/Sys/Login?ReturnUrl=%2fevent-6515709</a>
+              </li>
+              <li><a href="https://ggtc.org/event-3202705">https://ggtc.org/event-3202705</a></li>
+              <li><a href="https://ggtc.org/event-6158877">https://ggtc.org/event-6158877</a></li>
+              <li><a href="https://ggtc.org/event-6158873">https://ggtc.org/event-6158873</a></li>
+              <li><a
+                  href="https://ggtc.org/Sys/Login?ReturnUrl=%2fslack">https://ggtc.org/Sys/Login?ReturnUrl=%2fslack</a>
+              </li>
+              <li><a href="https://ggtc.org/event-6503991/Attendees">https://ggtc.org/event-6503991/Attendees</a></li>
+              <li><a href="https://ggtc.org/Track-Etiquette/">https://ggtc.org/Track-Etiquette/</a></li>
+              <li><a href="https://ggtc.org/event-6501809/Attendees">https://ggtc.org/event-6501809/Attendees</a></li>
+              <li><a href="https://ggtc.org/event-6470010/Attendees">https://ggtc.org/event-6470010/Attendees</a></li>
+              <li><a href="https://ggtc.org/event-6459465/Attendees">https://ggtc.org/event-6459465/Attendees</a></li>
+              <li><a href="https://ggtc.org/event-6459799/Attendees">https://ggtc.org/event-6459799/Attendees</a></li>
+              <li><a href="https://ggtc.org/event-6510461/Attendees">https://ggtc.org/event-6510461/Attendees</a></li>
+              <li><a href="https://ggtc.org/event-6510548/Attendees">https://ggtc.org/event-6510548/Attendees</a></li>
+              <li><a href="https://ggtc.org/event-6510514/Attendees">https://ggtc.org/event-6510514/Attendees</a></li>
+              <li><a href="https://ggtc.org/event-6510544/Attendees">https://ggtc.org/event-6510544/Attendees</a></li>
+              <li><a href="https://ggtc.org/event-6510189/Attendees">https://ggtc.org/event-6510189/Attendees</a></li>
+              <li><a href="https://ggtc.org/event-6510519/Attendees">https://ggtc.org/event-6510519/Attendees</a></li>
+              <li><a href="https://ggtc.org/event-6508350/Attendees">https://ggtc.org/event-6508350/Attendees</a></li>
+              <li><a href="https://ggtc.org/event-6510610/Attendees">https://ggtc.org/event-6510610/Attendees</a></li>
+              <li><a href="https://ggtc.org/event-6510196/Attendees">https://ggtc.org/event-6510196/Attendees</a></li>
+              <li><a href="https://ggtc.org/event-6510557/Attendees">https://ggtc.org/event-6510557/Attendees</a></li>
+              <li><a href="https://ggtc.org/event-6510507/Attendees">https://ggtc.org/event-6510507/Attendees</a></li>
+              <li><a href="https://ggtc.org/event-6510212/Attendees">https://ggtc.org/event-6510212/Attendees</a></li>
+              <li><a href="https://ggtc.org/event-6510450/Attendees">https://ggtc.org/event-6510450/Attendees</a></li>
+              <li><a href="https://ggtc.org/event-6510203/Attendees">https://ggtc.org/event-6510203/Attendees</a></li>
+              <li><a href="https://ggtc.org/event-6510555/Attendees">https://ggtc.org/event-6510555/Attendees</a></li>
+              <li><a href="https://ggtc.org/event-6510470/Attendees">https://ggtc.org/event-6510470/Attendees</a></li>
+              <li><a href="https://ggtc.org/event-6510600/Attendees">https://ggtc.org/event-6510600/Attendees</a></li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/90338498">https://ggtc.org/Sys/PublicProfile/90338498</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/95948010">https://ggtc.org/Sys/PublicProfile/95948010</a>
+              </li>
+              <li><a
+                  href="https://ggtc.org/event-6501809/Attendees?elp=2">https://ggtc.org/event-6501809/Attendees?elp=2</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/87254936">https://ggtc.org/Sys/PublicProfile/87254936</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/80083873">https://ggtc.org/Sys/PublicProfile/80083873</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/62734108">https://ggtc.org/Sys/PublicProfile/62734108</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/78895445">https://ggtc.org/Sys/PublicProfile/78895445</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/78901886">https://ggtc.org/Sys/PublicProfile/78901886</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/96060404">https://ggtc.org/Sys/PublicProfile/96060404</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/67876027">https://ggtc.org/Sys/PublicProfile/67876027</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/95530102">https://ggtc.org/Sys/PublicProfile/95530102</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/78748187">https://ggtc.org/Sys/PublicProfile/78748187</a>
+              </li>
+              <li><a
+                  href="https://ggtc.org/event-6470010/Attendees?elp=2">https://ggtc.org/event-6470010/Attendees?elp=2</a>
+              </li>
+              <li><a
+                  href="https://ggtc.org/event-6470010/Attendees?elp=3">https://ggtc.org/event-6470010/Attendees?elp=3</a>
+              </li>
+              <li><a
+                  href="https://ggtc.org/event-6470010/Attendees?elp=4">https://ggtc.org/event-6470010/Attendees?elp=4</a>
+              </li>
+              <li><a
+                  href="https://ggtc.org/event-6470010/Attendees?elp=5">https://ggtc.org/event-6470010/Attendees?elp=5</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/53017724">https://ggtc.org/Sys/PublicProfile/53017724</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/69797422">https://ggtc.org/Sys/PublicProfile/69797422</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/65940460">https://ggtc.org/Sys/PublicProfile/65940460</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/81503046">https://ggtc.org/Sys/PublicProfile/81503046</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/53329866">https://ggtc.org/Sys/PublicProfile/53329866</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/86915435">https://ggtc.org/Sys/PublicProfile/86915435</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/67891718">https://ggtc.org/Sys/PublicProfile/67891718</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/78421166">https://ggtc.org/Sys/PublicProfile/78421166</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/76342297">https://ggtc.org/Sys/PublicProfile/76342297</a>
+              </li>
+              <li><a
+                  href="https://ggtc.org/event-6501809/Attendees?elp=1">https://ggtc.org/event-6501809/Attendees?elp=1</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/52126564">https://ggtc.org/Sys/PublicProfile/52126564</a>
+              </li>
+              <li><a
+                  href="https://ggtc.org/event-6470010/Attendees?elp=1">https://ggtc.org/event-6470010/Attendees?elp=1</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/44515218">https://ggtc.org/Sys/PublicProfile/44515218</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/67288240">https://ggtc.org/Sys/PublicProfile/67288240</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/69628442">https://ggtc.org/Sys/PublicProfile/69628442</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/74820283">https://ggtc.org/Sys/PublicProfile/74820283</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/61217350">https://ggtc.org/Sys/PublicProfile/61217350</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/68019274">https://ggtc.org/Sys/PublicProfile/68019274</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/52735020">https://ggtc.org/Sys/PublicProfile/52735020</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/49317830">https://ggtc.org/Sys/PublicProfile/49317830</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/95315955">https://ggtc.org/Sys/PublicProfile/95315955</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/65300233">https://ggtc.org/Sys/PublicProfile/65300233</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/73514589">https://ggtc.org/Sys/PublicProfile/73514589</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/69687218">https://ggtc.org/Sys/PublicProfile/69687218</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/67812698">https://ggtc.org/Sys/PublicProfile/67812698</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/87476142">https://ggtc.org/Sys/PublicProfile/87476142</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/49222701">https://ggtc.org/Sys/PublicProfile/49222701</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/65139121">https://ggtc.org/Sys/PublicProfile/65139121</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/72077409">https://ggtc.org/Sys/PublicProfile/72077409</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/67875939">https://ggtc.org/Sys/PublicProfile/67875939</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/61030127">https://ggtc.org/Sys/PublicProfile/61030127</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/69792158">https://ggtc.org/Sys/PublicProfile/69792158</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/95950693">https://ggtc.org/Sys/PublicProfile/95950693</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/68988679">https://ggtc.org/Sys/PublicProfile/68988679</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/63596567">https://ggtc.org/Sys/PublicProfile/63596567</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/93615228">https://ggtc.org/Sys/PublicProfile/93615228</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/60384203">https://ggtc.org/Sys/PublicProfile/60384203</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/60022294">https://ggtc.org/Sys/PublicProfile/60022294</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/44514697">https://ggtc.org/Sys/PublicProfile/44514697</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/77453407">https://ggtc.org/Sys/PublicProfile/77453407</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/69797821">https://ggtc.org/Sys/PublicProfile/69797821</a>
+              </li>
+              <li><a href="https://ggtc.org/Sys/PublicProfile/69472580">https://ggtc.org/Sys/PublicProfile/69472580</a>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<nav>
+					<ul class="d-flex gap-3 list-unstyled justify-content-center align-items-center flex-column flex-lg-row">
+						<li class="">
+							<a href=""><img src="assets/img/ggtc-logo.svg" alt="Golden Gate Triathlon Club"></a>
+						</li>
+						<li class="">
+							<a class="" href="">About</a>
+						</li>
+						<li class="">
+							<a class="" href="">Calendar</a>
+						</li>
+						<li class="">
+							<a class="" href="">Sports</a>
+						</li>
+						<li class="">
+							<a class="" href="">Community</a>
+						</li>
+						<li class="">
+							<a class="" href="">Training Programs</a>
+						</li>
+						<li class="">
+							<a class="" href="">Why Join</a>
+						</li>
+
+						<li class="ms-lg-auto">
+							<a href="https://youtube.com">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+									<path
+										d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z" />
+								</svg>
+							</a>
+						</li>
+
+						<li>
+							<a href="https://instagram.com">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+									<path
+										d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+								</svg>
+							</a>
+						</li>
+					</ul>
+
+
+				</nav>
+			</div>
+		</div>
+	</div>
+</footer>
+</body>
+
+</html>
