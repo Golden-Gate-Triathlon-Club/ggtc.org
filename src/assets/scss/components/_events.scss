@@ -1,0 +1,48 @@
+.powered-by-event-espresso-credit {
+	display: none !important;
+}
+
+.espresso-single-event__dates h3 {
+	display: none !important;
+}
+
+.no-tkt-slctr-ticket-dv {
+	border: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.ticket-selector-submit-btn {
+	@extend .btn;
+	@extend .btn-tertiary;
+}
+
+.no-tkt-slctr-ticket-content-dv {
+	h5 {
+		display: none !important;
+	}
+}
+
+.ee-ical-sbmt {
+	position: relative;
+	&:before {
+		content: none !important;
+	}
+	&:after {
+		position: absolute;
+		right: 0;
+		top: 0;
+		content: "Add to Calendar";
+		z-index: 10;
+		background-color: $brand-red;
+		color: $brand-white;
+		padding: 10px 20px;
+		border-radius: 5px;
+		font-size: 14px;
+		font-weight: 700;
+		text-transform: uppercase;
+		cursor: pointer;
+		width: 200px;
+		height: 40px;
+	}
+}

@@ -481,12 +481,17 @@ function the_breadcrumb() {
             // Custom post type - add archive link
             $post_type_obj = get_post_type_object($post_type);
             if ($post_type_obj) {
-                $archive_url = get_post_type_archive_link($post_type);
-                if ($archive_url) {
+                if ( $post_type === 'espresso_events' ) {
+                    $calendar_page = get_page_by_path( 'calendar' );
+                    $archive_url   = $calendar_page ? get_permalink( $calendar_page ) : home_url( '/calendar/' );
+                } else {
+                    $archive_url = get_post_type_archive_link( $post_type );
+                }
+                if ( $archive_url ) {
                     $breadcrumb .= '<li class="breadcrumb-item">';
                     $breadcrumb .= '<span class="breadcrumb-separator">' . $separator . '</span>';
-                    $breadcrumb .= '<a href="' . esc_url($archive_url) . '" class="breadcrumb-link">';
-                    $breadcrumb .= esc_html($post_type_obj->labels->name);
+                    $breadcrumb .= '<a href="' . esc_url( $archive_url ) . '" class="breadcrumb-link">';
+                    $breadcrumb .= esc_html( $post_type_obj->labels->name );
                     $breadcrumb .= '</a>';
                     $breadcrumb .= '</li>';
                 }
@@ -550,3 +555,105 @@ function the_breadcrumb() {
     
     echo $breadcrumb;
 }
+
+
+
+add_filter( 'FHEE__EED_Event_Single__template_include__allow_custom_selected_template', '__return_true' );
+
+// That flag still registers EED_Event_Single::event_details on the_content, which injects tickets,
+// datetimes, and venue around the editor body — duplicating single-espresso_events.php output.
+add_filter(
+	'template_include',
+	function ( $template ) {
+		if ( ! class_exists( 'EED_Event_Single' ) || ! is_singular( 'espresso_events' ) ) {
+			return $template;
+		}
+		if ( basename( $template ) !== 'single-espresso_events.php' ) {
+			return $template;
+		}
+		remove_filter(
+			'the_content',
+			array( 'EED_Event_Single', 'event_details' ),
+			EED_Event_Single::EVENT_DETAILS_PRIORITY
+		);
+		return $template;
+	},
+	1000
+);
+
+function calendar_plus_direct_links() {
+    if (!is_page()) return;
+
+    wp_add_inline_style('wp-block-library', '
+        #calendar-plus .rbc-event { cursor: pointer !important; }
+        #calendar-plus .chakra-popover, #calendar-plus [aria-haspopup="dialog"] { display: none !important; }
+        #calendar-plus .css-nk32ej { pointer-events: auto !important; }
+    ');
+
+    wp_register_script('ggtc-calendar-plus-direct-links', false, array(), null, true);
+    wp_enqueue_script('ggtc-calendar-plus-direct-links');
+
+    $calendar_plus_direct_links_js = <<<'JS'
+document.addEventListener('DOMContentLoaded', function () {
+    let delegatedClickAttached = false;
+
+    function initDirectLinks() {
+        const root = document.getElementById('calendar-plus');
+        const scope = root || document.body;
+        scope.querySelectorAll('.chakra-popover, [aria-haspopup="dialog"]').forEach(function (el) {
+            el.removeAttribute('aria-haspopup');
+            el.removeAttribute('aria-controls');
+        });
+
+        if (!delegatedClickAttached) {
+            delegatedClickAttached = true;
+            document.addEventListener(
+                'click',
+                function (e) {
+                    const target = e.target.closest('#calendar-plus .rbc-event-content .css-nk32ej');
+                    if (!target) {
+                        return;
+                    }
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const eventDiv = target.closest('.rbc-event');
+                    if (!eventDiv) {
+                        return;
+                    }
+                    const titleEl = eventDiv.querySelector('.css-186s6vl');
+                    const timeEl = eventDiv.querySelector('.css-1vjlm3c');
+                    const title = (titleEl ? titleEl.textContent : '').trim();
+                    const timeText = (timeEl ? timeEl.textContent : '').trim();
+                    const slug = title
+                        .split(' - ')[0]
+                        .toLowerCase()
+                        .replace(/[^a-z0-9]+/g, '-')
+                        .replace(/^-|-$/g, '');
+                    const timeMatch = timeText.match(/(\d{1,2}):(\d{2} [AP]M)/i);
+                    let datetimeId = null;
+                    if (timeMatch) {
+                        const hour = parseInt(timeMatch[1], 10);
+                        const minsPart = timeMatch[2].match(/(\d{2})/);
+                        const mins = minsPart ? parseInt(minsPart[1], 10) : NaN;
+                        datetimeId = hour * 100 + mins;
+                        if (datetimeId < 1 || Number.isNaN(datetimeId)) {
+                            datetimeId = null;
+                        }
+                    }
+                    const regUrl = '/events/' + slug + '/';
+                    window.location.href = regUrl;
+                }
+            );
+        }
+    }
+
+    initDirectLinks();
+    const moRoot = document.getElementById('calendar-plus') || document.body;
+    const observer = new MutationObserver(initDirectLinks);
+    observer.observe(moRoot, { childList: true, subtree: true });
+});
+JS;
+
+    wp_add_inline_script('ggtc-calendar-plus-direct-links', $calendar_plus_direct_links_js);
+}
+add_action('wp_enqueue_scripts', 'calendar_plus_direct_links');

@@ -21,8 +21,6 @@ $table_content = get_sub_field("table_content");
         <div class="table-responsive">
           <table class="table table-striped table-bordered table-hover table-rounded table-responsive">
             <?php foreach ($table_content as $row) : ?>
-            <!-- if table_header is true then use thead and th
-          if table_header is false then use tbody -->
             <?php if ($row['table_header']) : ?>
             <thead class="table-dark">
               <tr scope="row">
