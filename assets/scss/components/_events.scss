@@ -46,3 +46,11 @@
 		height: 40px;
 	}
 }
+
+table.event-table a {
+	color: $brand-white !important;
+	text-decoration: underline !important;
+	&:hover {
+		color: $brand-red !important;
+	}
+}

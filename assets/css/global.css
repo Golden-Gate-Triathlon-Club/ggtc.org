@@ -13114,3 +13114,11 @@ body.admin-bar .site-content {
   width: 200px;
   height: 40px;
 }
+
+table.event-table a {
+  color: #fff !important;
+  text-decoration: underline !important;
+}
+table.event-table a:hover {
+  color: #dd2b2e !important;
+}

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <section class="hero">
-  <img src="<?php echo get_template_directory_uri(); ?>/docs/assets/img/page-hero-run.webp" alt="">
+  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page-hero-run.webp" alt="">
   <div class="caption">
     <div class="container">
       <div class="row">

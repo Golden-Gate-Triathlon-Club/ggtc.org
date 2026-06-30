@@ -63,7 +63,21 @@ function ggtc_enqueue_scripts() {
     wp_enqueue_style('ggtc-style', get_stylesheet_uri());
     
     // Enqueue your compiled CSS from the build process
-    wp_enqueue_style('ggtc-main', get_template_directory_uri() . '/docs/assets/css/global.css');
+    $global_css_path = get_template_directory() . '/assets/css/global.css';
+    wp_enqueue_style(
+        'ggtc-main',
+        get_template_directory_uri() . '/assets/css/global.css',
+        array(),
+        file_exists( $global_css_path ) ? filemtime( $global_css_path ) : null
+    );
+
+    // Font Awesome Solid
+    wp_enqueue_style(
+        'font-awesome-solid',
+        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css',
+        array(),
+        '6.5.2'
+    );
     
     // Enqueue jQuery (if needed)
     wp_enqueue_script('jquery');
@@ -108,7 +122,7 @@ add_action('admin_head', 'ggtc_admin_fonts');
  * TinyMCE Customization
  */
 add_filter('tiny_mce_before_init', function ($mce_init) {
-    $custom_css = get_stylesheet_directory_uri() . '/docs/assets/css/tinymce.css'; // Your custom CSS file path
+    $custom_css = get_stylesheet_directory_uri() . '/assets/css/tinymce.css';
     
     if (isset($mce_init['content_css'])) {
         $mce_init['content_css'] .= ',' . $custom_css;

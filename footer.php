@@ -6,7 +6,7 @@
           <ul class="d-flex gap-3 list-unstyled justify-content-center align-items-center flex-column flex-lg-row">
             <li>
               <a href="<?php echo esc_url(home_url('/')); ?>"><img
-                  src="<?php echo get_template_directory_uri(); ?>/docs/assets/img/ggtc-logo.svg"
+                  src="<?php echo get_template_directory_uri(); ?>/assets/img/ggtc-logo.svg"
                   alt="Golden Gate Triathlon Club"></a>
             </li>
             <li>

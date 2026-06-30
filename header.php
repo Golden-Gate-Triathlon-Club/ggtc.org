@@ -5,10 +5,9 @@
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="profile" href="https://gmpg.org/xfn/11">
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/docs/assets/css/global.css" />
-  <link href="light-mode-favicon.png" rel="icon" media="(prefers-color-scheme: light)">
-  <link href="dark-mode-favicon.png" rel="icon" media="(prefers-color-scheme: dark)">
-  <link href="light-mode-favicon.png" rel="icon" media="(prefers-color-scheme: no-preference)">
+  <link href="<?php echo esc_url( get_template_directory_uri() . '/light-mode-favicon.png' ); ?>" rel="icon" media="(prefers-color-scheme: light)">
+  <link href="<?php echo esc_url( get_template_directory_uri() . '/dark-mode-favicon.png' ); ?>" rel="icon" media="(prefers-color-scheme: dark)">
+  <link href="<?php echo esc_url( get_template_directory_uri() . '/light-mode-favicon.png' ); ?>" rel="icon" media="(prefers-color-scheme: no-preference)">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -22,7 +21,7 @@
     <nav class="navbar navbar-expand-xl">
       <div class="container">
         <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
-          <img src="<?php echo get_template_directory_uri(); ?>/docs/assets/img/ggtc-logo.svg"
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/ggtc-logo.svg"
             alt="Golden Gate Triathlon Club">
         </a>
         <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

@@ -836,6 +836,153 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_6a3eff35c487a": {
+                    "key": "layout_6a3eff35c487a",
+                    "name": "card-section",
+                    "label": "Card Section",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6a3eff4fc487c",
+                            "label": "Before Cards Content",
+                            "name": "before_cards_content",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "allow_in_bindings": 0,
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_6a3eff68c487e",
+                            "label": "Cards",
+                            "name": "cards",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "table",
+                            "min": 1,
+                            "max": 4,
+                            "collapsed": "",
+                            "button_label": "Add Card",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_6a3eff72c487f",
+                                    "label": "Card",
+                                    "name": "card",
+                                    "aria-label": "",
+                                    "type": "clone",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "clone": [
+                                        "group_6a3efdea1a1a6"
+                                    ],
+                                    "display": "group",
+                                    "layout": "row",
+                                    "prefix_label": 0,
+                                    "prefix_name": 0,
+                                    "parent_repeater": "field_6a3eff68c487e"
+                                }
+                            ]
+                        },
+                        {
+                            "key": "field_6a3eff5dc487d",
+                            "label": "After Cards Content",
+                            "name": "after_cards_content",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "allow_in_bindings": 0,
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_6a441af5141cc": {
+                    "key": "layout_6a441af5141cc",
+                    "name": "events-section",
+                    "label": "Events Section",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6a441b00141cf",
+                            "label": "Featured Event",
+                            "name": "featured_event",
+                            "aria-label": "",
+                            "type": "relationship",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "espresso_events"
+                            ],
+                            "post_status": [
+                                "publish"
+                            ],
+                            "taxonomy": [
+                                "espresso_event_categories:bike",
+                                "espresso_event_categories:run",
+                                "espresso_event_categories:swim",
+                                "espresso_event_categories:social"
+                            ],
+                            "filters": [
+                                "search",
+                                "post_type",
+                                "taxonomy"
+                            ],
+                            "return_format": "object",
+                            "min": "",
+                            "max": "",
+                            "allow_in_bindings": 0,
+                            "elements": "",
+                            "bidirectional": 0,
+                            "bidirectional_target": []
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -877,5 +1024,8 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1760456878
+    "display_title": "",
+    "allow_ai_access": false,
+    "ai_description": "",
+    "modified": 1782854655
 }

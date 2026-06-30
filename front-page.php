@@ -16,15 +16,15 @@ endif;
 
 
   <?php //get_template_part('components/section-full-width'); ?>
-  <?php get_template_part('components/section-stats'); ?>
-  <?php get_template_part('components/sponsors-slider'); ?>
-  <?php get_template_part('components/section-events'); ?>
+  <?php     get_template_part('components/section-stats'); ?>
+  <?php //get_template_part('components/sponsors-slider'); ?>
+  <?php //get_template_part('components/section-events'); ?>
   <?php get_template_part('components/section-sports-banner'); ?>
-  <?php get_template_part('components/section-training-programs'); ?>
-  <?php get_template_part('components/section-member-benefits'); ?>
+  <?php //get_template_part('components/section-training-programs'); ?>
+  <?php //get_template_part('components/section-member-benefits'); ?>
   <?php //get_template_part('components/section-photo-banner-full-width'); ?>
-  <?php get_template_part('components/section-community'); ?>
-  <?php get_template_part('components/section-photo-banner-tall'); ?>
+  <?php //get_template_part('components/section-community'); ?>
+  <?php //get_template_part('components/section-photo-banner-tall'); ?>
   <?php //get_template_part('components/section-cta-banner'); ?>
 
 

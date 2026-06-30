@@ -4,7 +4,8 @@
 	"description": "Starter Project site",
 	"main": "index.html",
 	"scripts": {
-		"dev": "gulp"
+		"dev": "gulp",
+		"build": "gulp style"
 	},
 	"repository": {
 		"type": "git",
@@ -26,8 +27,6 @@
 		"sass": "^1.46.0"
 	},
 	"dependencies": {
-		"browser-sync": "^2.26.14",
-		"gulp": "^4.0.2",
-		"gulp-file-include": "^2.3.0"
+		"gulp": "^4.0.2"
 	}
 }

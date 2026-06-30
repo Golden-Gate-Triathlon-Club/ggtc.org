@@ -1,44 +1,23 @@
 const { series } = require("gulp")
 const gulp = require("gulp")
 const sass = require("gulp-sass")(require("sass"))
-const browserSync = require("browser-sync").create()
-const fileinclude = require("gulp-file-include")
-
-browserSync.init({
-	server: {
-		baseDir: "./docs",
-		index: "/index.html",
-	},
-})
 
 function style() {
 	return gulp
-		.src("./src/assets/scss/*.scss")
-		.pipe(sass())
-		.on("error", sass.logError)
-		.pipe(gulp.dest("./docs/assets/css"))
-}
-
-function moveimg() {
-	return gulp.src(["./src/assets/img/*"]).pipe(gulp.dest("./docs/assets/img"))
-}
-
-function movejs() {
-	return gulp.src(["./src/assets/js/*"]).pipe(gulp.dest("./docs/assets/js"))
-}
-
-function include() {
-	return gulp
-		.src(["./src/*.html"])
+		.src("./assets/scss/*.scss")
 		.pipe(
-			fileinclude({
-				prefix: "@@",
-				basepath: "@file",
+			sass({
+				includePaths: ["./"],
 			})
 		)
-		.pipe(gulp.dest("./docs"))
+		.on("error", sass.logError)
+		.pipe(gulp.dest("./assets/css"))
 }
 
-exports.default = function () {
-	gulp.watch("./src/**/*").on("change", series(style, include, moveimg, movejs, browserSync.reload))
+function watchFiles(done) {
+	gulp.watch("./assets/scss/**/*", style)
+	done()
 }
+
+exports.style = style
+exports.default = series(style, watchFiles)
