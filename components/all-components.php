@@ -13,6 +13,10 @@ if( have_rows('components') ):
             get_template_part('components/section-photo-banner-full-width');
         elseif( get_row_layout() == 'table' ):
             get_template_part('components/section-table');
+        elseif( get_row_layout() == 'card-section' ):
+            get_template_part('components/section-cards');
+        elseif( get_row_layout() == 'events-section' ):
+            get_template_part('components/section-events');
         endif;
     endwhile;
 endif;
