@@ -1,28 +1,6 @@
 <?php get_header();?>
-
-
 <section class="hero">
-  <?php
-  $hero_image = null;
-  if( have_rows('components') ):
-      while( have_rows('components') ): the_row();
-          if( get_row_layout() == 'hero' ): 
-            $hero_image = get_sub_field('hero_image');
-            break; // Exit loop once we find the hero layout
-          endif;
-      endwhile; 
-  endif;
-
-  if ($hero_image): ?>
-  <img src="<?php echo esc_url($hero_image['url']); ?>"
-    alt="<?php echo esc_attr($hero_image['alt'] ?: get_the_title()); ?>">
-
-  <?php else: ?>
-
-  <img src="<?php echo get_template_directory_uri(); ?>/assets/img/page-hero-run.webp" alt="">
-  <?php endif; ?>
-
-  <div class="caption">
+  <div class="caption no-image">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
@@ -48,6 +26,8 @@
     </div>
   </div>
 </section>
+
+
 <?php get_template_part('components/breadcrumbs'); ?>
 
 <main id="site-content" role="main" class="padding-y-100">
@@ -55,31 +35,26 @@
   <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <div class="container">
       <div class="row">
-        <div class="col-lg-6">
-
-
+        <div class="col-lg-3">
           <?php 
             $sponsor_logo = get_field('sponsor_logo');
             if ($sponsor_logo) :
           ?>
           <div class="sponsor-logo mb-5">
-            <img class="mx-auto d-block" src="<?php echo esc_url($sponsor_logo['url']); ?>"
+            <img class="mx-auto d-block img-fluid" src="<?php echo esc_url($sponsor_logo['url']); ?>"
               alt="<?php echo esc_attr($sponsor_logo['alt'] ?: get_the_title()); ?>">
           </div>
-
           <?php endif; ?>
-
         </div>
-
-        <div class="col-lg-6 text-center">
+        <div class="col-lg-9 text-end">
           <?php 
           $sponsor_website = get_field('sponsor_website');
           if ($sponsor_website) :
           ?>
 
-          <a href="<?php echo esc_url($sponsor_website); ?>" target="_blank" rel="noopener noreferrer"
+          <a href=" <?php echo esc_url($sponsor_website); ?>" target="_blank" rel="noopener noreferrer"
             class="btn btn-primary">
-            Visit Website
+            Visit Website &rarr;
           </a>
 
           <?php endif; ?>

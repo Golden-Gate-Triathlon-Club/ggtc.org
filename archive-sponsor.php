@@ -15,6 +15,8 @@
   </div>
 </section>
 
+
+
 <?php get_template_part('components/breadcrumbs'); ?>
 
 <main id="site-content" role="main" class="padding-y-100">
@@ -70,36 +72,27 @@
               if (!empty($sponsors_in_level)) :
           ?>
 
-          <!-- <?php echo esc_html($level->name); ?> Sponsors -->
           <div class="sponsor-level-section mb-5">
             <h2 id="<?php echo esc_attr($level_slug); ?>" class="sponsor-level-title mb-4">
-              <?php echo esc_html($level->name); ?></h2>
+              <?php echo esc_html($level->name); ?> Sponsors</h2>
             <hr>
             <div class="row">
               <?php foreach ($sponsors_in_level as $sponsor_post) : 
                 setup_postdata($sponsor_post);
                 $sponsor_logo = get_field('sponsor_logo', $sponsor_post->ID);
               ?>
-              <div class="col-lg-4 mb-4">
+              <div class="col-lg-4 mb-4 d-flex">
                 <a href="<?php echo get_permalink($sponsor_post->ID); ?>"
-                  class="card h-100 sponsor-card-<?php echo esc_attr($level_slug); ?>"
+                  class="d-flex align-items-center justify-content-center p-5 h-100 w-100 sponsor-<?php echo esc_attr($level_slug); ?>"
                   data-level="<?php echo esc_attr($level_slug); ?>">
-                  <div class="sponsor-card-inner">
-
-                    <?php if ($sponsor_logo) : ?>
-                    <div class="sponsor-logo">
-                      <img src="<?php echo esc_url($sponsor_logo['url']); ?>"
-                        alt="<?php echo esc_attr($sponsor_logo['alt'] ?: $sponsor_post->post_title); ?>">
-                    </div>
-                    <?php endif; ?>
-
-                    <div class="sponsor-info">
-                      <h3 class="sponsor-name">
-                        <?php echo esc_html($sponsor_post->post_title); ?>
-                      </h3>
-                    </div>
-                  </div>
-
+                  <?php if ($sponsor_logo) : ?>
+                  <img class="img-fluid" src="<?php echo esc_url($sponsor_logo['url']); ?>"
+                    alt="<?php echo esc_attr($sponsor_logo['alt'] ?: $sponsor_post->post_title); ?>">
+                  <? else : ?>
+                  <h3 class="sponsor-name">
+                    <?php echo esc_html($sponsor_post->post_title); ?>
+                  </h3>
+                  <?php endif; ?>
                 </a>
               </div>
               <?php endforeach; ?>
@@ -112,8 +105,6 @@
             }
           }
           ?>
-
-
 
           <?php else : ?>
 
@@ -128,7 +119,5 @@
       </div>
     </div>
 </main>
-
-
 
 <?php get_footer(); ?>

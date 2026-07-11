@@ -1,3 +1,23 @@
+// Events Calendar Plus injects Chakra UI global styles that reset h1/h2/etc.
+// Keep theme hero/breadcrumb typography intact on pages with the calendar shortcode.
+body .hero .caption {
+	h1,
+	.h1 {
+		font-family: $barlow-condensed !important;
+		font-size: clamp(3.722rem, 3vw + 2.25rem, 5.333rem) !important;
+		font-weight: 600 !important;
+		line-height: 1 !important;
+		text-transform: uppercase !important;
+		max-width: none !important;
+		color: inherit !important;
+	}
+
+	&.no-image {
+		position: relative !important;
+		background-color: $brand-red !important;
+	}
+}
+
 .calendar table {
 	table-layout: fixed;
 	width: 100%;

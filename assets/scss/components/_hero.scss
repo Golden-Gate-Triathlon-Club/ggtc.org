@@ -27,10 +27,17 @@
 			position: relative;
 		}
 
-		h1 {
+		h1,
+		.h1 {
 			margin: 0;
 			padding: 0;
 			text-transform: uppercase;
+			font-family: $barlow-condensed;
+			font-size: clamp(3.722rem, 3vw + 2.25rem, 5.333rem);
+			font-weight: 600;
+			line-height: 1;
+			color: inherit;
+			max-width: none;
 		}
 	}
 }

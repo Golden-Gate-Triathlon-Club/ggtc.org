@@ -671,3 +671,33 @@ JS;
     wp_add_inline_script('ggtc-calendar-plus-direct-links', $calendar_plus_direct_links_js);
 }
 add_action('wp_enqueue_scripts', 'calendar_plus_direct_links');
+
+/**
+ * Events Calendar Plus loads Chakra UI globally; its CSS reset sets h1–h6 to
+ * font-size/font-weight inherit. Re-assert hero typography after plugin styles.
+ */
+function ggtc_calendar_plus_hero_fix() {
+    if ( ! wp_script_is( 'calendarPlus', 'registered' ) ) {
+        return;
+    }
+
+    $css = '
+        body .hero .caption h1,
+        body .hero .caption .h1 {
+            font-family: "Barlow Condensed", sans-serif !important;
+            font-size: clamp(3.722rem, 3vw + 2.25rem, 5.333rem) !important;
+            font-weight: 600 !important;
+            line-height: 1 !important;
+            text-transform: uppercase !important;
+            max-width: none !important;
+            color: inherit !important;
+        }
+        body .hero .caption.no-image {
+            position: relative !important;
+            background-color: #dd2b2e !important;
+        }
+    ';
+
+    wp_add_inline_style( 'calendarPlus', $css );
+}
+add_action( 'wp_enqueue_scripts', 'ggtc_calendar_plus_hero_fix', 100 );

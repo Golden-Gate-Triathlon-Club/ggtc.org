@@ -86,7 +86,7 @@
         <?php endif; ?>
 
         <div class="text-center mt-5">
-          <a href="#" class="btn btn-primary">View Calendar</a>
+          <a href="<?php echo esc_url( get_permalink( 68 ) ); ?>" class="btn btn-primary">View Calendar</a>
         </div>
       </div>
 

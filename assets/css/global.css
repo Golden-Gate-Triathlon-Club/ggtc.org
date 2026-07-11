@@ -12004,10 +12004,17 @@ header a:hover {
   background-color: #dd2b2e;
   position: relative;
 }
-.hero .caption h1, .hero .caption .h1 {
+.hero .caption h1,
+.hero .caption .h1 {
   margin: 0;
   padding: 0;
   text-transform: uppercase;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: clamp(3.722rem, 3vw + 2.25rem, 5.333rem);
+  font-weight: 600;
+  line-height: 1;
+  color: inherit;
+  max-width: none;
 }
 
 .navbar .nav-link.dropdown-toggle:focus,
@@ -12634,7 +12641,7 @@ main .text-column:not(:last-child) {
 .bio-card {
   flex: 1 1 calc((100% - var(--flex-gap) * 2) / 3);
   max-width: calc((100% - var(--flex-gap) * 2) / 3);
-  transition: all 0.3s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 .bio-card.selected {
   transform: scale(1.03);
@@ -12898,6 +12905,21 @@ main .text-column:not(:last-child) {
     padding-top: 25px;
     padding-bottom: 25px;
   }
+}
+
+body .hero .caption h1,
+body .hero .caption .h1 {
+  font-family: "Barlow Condensed", sans-serif !important;
+  font-size: clamp(3.722rem, 3vw + 2.25rem, 5.333rem) !important;
+  font-weight: 600 !important;
+  line-height: 1 !important;
+  text-transform: uppercase !important;
+  max-width: none !important;
+  color: inherit !important;
+}
+body .hero .caption.no-image {
+  position: relative !important;
+  background-color: #dd2b2e !important;
 }
 
 .calendar table {

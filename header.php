@@ -5,9 +5,12 @@
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="profile" href="https://gmpg.org/xfn/11">
-  <link href="<?php echo esc_url( get_template_directory_uri() . '/light-mode-favicon.png' ); ?>" rel="icon" media="(prefers-color-scheme: light)">
-  <link href="<?php echo esc_url( get_template_directory_uri() . '/dark-mode-favicon.png' ); ?>" rel="icon" media="(prefers-color-scheme: dark)">
-  <link href="<?php echo esc_url( get_template_directory_uri() . '/light-mode-favicon.png' ); ?>" rel="icon" media="(prefers-color-scheme: no-preference)">
+  <link href="<?php echo esc_url( get_template_directory_uri() . '/light-mode-favicon.png' ); ?>" rel="icon"
+    media="(prefers-color-scheme: light)">
+  <link href="<?php echo esc_url( get_template_directory_uri() . '/dark-mode-favicon.png' ); ?>" rel="icon"
+    media="(prefers-color-scheme: dark)">
+  <link href="<?php echo esc_url( get_template_directory_uri() . '/light-mode-favicon.png' ); ?>" rel="icon"
+    media="(prefers-color-scheme: no-preference)">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -52,7 +55,7 @@
               </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Calendar</a>
+              <a class="nav-link" href="<?php echo get_permalink(68); ?>">Calendar</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="<?php echo get_permalink(344); ?>" data-bs-toggle="dropdown"
